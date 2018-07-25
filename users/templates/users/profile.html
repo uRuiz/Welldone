@@ -1,0 +1,73 @@
+{% extends "template.html" %}
+{% load i18n %}
+
+
+{% block title %}
+    {{ username }}
+{% endblock%}
+
+{% block subnavbar %}
+    {% include 'includes/subnavbar.html' %}
+{% endblock %}
+
+{% block body %}
+    <section>
+        {% if error_message %}
+            <div class="row justify-content-center">
+                {{ error_message }}
+            </div>
+        {% else %}
+            <div class="row justify-content-center">
+                {% if photo %}
+                    <div class="profile-img" style="background-image: url('{{ photo }}');"></div>
+                {% else %}
+                    <img class="img-thumbnail profile-picture" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAACgCAMAAAC8EZcfAAAAgVBMVEX///8zMzMsLCwwMDAqKiomJibz8/NwcHAiIiIfHx8lJSX7+/uzs7Pl5eVsbGzCwsKrq6ubm5u8vLzS0tJTU1OlpaV7e3uQkJDe3t7r6+vIyMg4ODhgYGAZGRnY2Ng/Pz+Dg4NKSkpWVlZjY2MSEhKJiYkAAAB4eHhLS0tDQ0Oenp5mOk+1AAAE3klEQVR4nO2c13qjOhRGQVt0F4oxxWBcx+X9H3DAcc44OSRO0L/BF6wnWJ+kXVBB00ZGRkZGRkZGRkaQeA1mgze0yjtelqZRFOXzBj+oSayaZZJPh1ZriOKNtSsuVaXbTo1r1EhRIw13H2dD62Wni5CCGvT/I2gXDapnBq5sE3tQlPFwS9Gc793v9WpIWPN0CLs0vJ5IPNN7G8QimfQeLpPtSvxI7zaKcrXYrPvU8452a1B851ha/Y2il/x48B4wFr0Zxk9C9wtk0VPOybr51eGy7cPQ9EVHv2Yl5ux++czo7FcbGsw5MQtWsrtejbRMTr/57pfZpWUMC8ZZDv+o6tWIQ8EmOLHV/WrKyYsLCotLMMQI0oUrHQYGRFCXAY9fpBzCd2jB0tqkiy4tQisyYWizzRPMTyfCJ0MvcWB+teEB3nqFuPFrkBZ4kr0KFCB3qAJPcoBJgf8QG2jXEIEHEJ6tE7Umqw0jBvqlBXoA6zmeAec4x4bwDSLgxhKojfkIMBV6qC7hAw4uSrwjPkbqKMH1NKbFsAZ12r24oP4HVu2YBJ35iwvK5MUFxf7FBWmBStVsgqhUzSW4Q1Vjc/bia9BLOEodsJTw1GK9hBVjJkEb5ad5V5fBT8xggtoc+U38jg3chZtzNKwlcLs6Z/DTS2DLv17gP5qAzYymZRylBLkGNY6eH9jya1rMMMVyAxQM4VsfYMEpQ5QYsIa6Ab/3QRfosd0SHiXGFemnwTtC8PZbdEFPsVhCNzDx+4NYwXSHD+LVEbiN7jM0rARMM2bBszcDE8xY/PQDrN+aHlgES5QfkyBdYILZiqGZ0eURJmjuORah7cMEvYDjsxP50TRnaKipAn40cVQS6EmTt2E4q4NeC/DhfrobAv209RZ+HLvCnmjjG9YCe1EvRicaiW1YtQxd7XCHJHd08CIkXB15A7w7g79gBt4Fxh1BvBOVUEG5BPtpGXYEHWiabjAtZLUjQvtp2gQpaDNcccxmOENx5nh3kG4dTC4kF32z7J0Askso9CPbbfRsAxAs2K5RN4bKY0gV8PShBeWLrLTjfQ+hfB4hTqzPIdQF4W3WJ9S/ntBt1idUT47pzPwkJ1VsaqCnN60o3ufH3VP4CrVFSILbT4uUvp74Z1gzlQ7FHP4nqEpXVPBfIi3kCiezbtDDc+1MYReE4RlJC3FnQbHv5QFv3vlgkbsO30nPnRchZ6v6D7PrfjB3r/ofXQ8lcHdWn9D1egAVPf0Toms5xl0JfYLfsSfsTbDr65LeBK8dqzH18pOA5o1n1zxIi2sP/yUJFb7dibYBa6oxpz6p7SCR68wipp4ri2KLbPXtI+HMQvxMZ5NkVtnd/1HxUVEUAba1DpeLlQDZvSnK7QlUmM0sP5VO19+PfA1Jh/ypcu2b5puLw/Fm7eZor5JcKajDZE/4sXtUNPST37XLToNiJXmuHD0qCjovfx8wdb47HwxkVHznKMsqnv4mN6bhUgfku9842oY1Wf8sYuqEt7NZF147wj1v/Of5e31crAawu0FSP8/8b4bRzJKqHMru7ijssvBb16O3nlhC5W9GMG7r8XM/kU2OW/6U8mOEcTn5D81ttBlu4X1BXR+2++AWM9PbwnstvRsk3LJKUo1eYuF9ARmuNrTDM0ZBVUZBVUZBVUZBVV5e8C8dP2Dbh5RuQgAAAABJRU5ErkJggg==">
+                {% endif %}
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-md-10 col-sm-10">
+                    {{ name }} (@{{ username }})
+                </div>
+            </div>
+            {% if bio %}
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-md-10 col-sm-10">
+                    <p class="bio">"{{ bio }}"</p>
+                </div>
+            </div>
+            {% endif %}
+            {% if user.is_authenticated %}
+                <div class="row justify-content-center">
+                    <div class="col-lg-6 col-md-10 col-sm-10">
+                        {% if username == user.username %}
+                            <a href="{% url 'users_update' %}">
+                                <button class="btn btn-article-action" type="button">
+                                    {% trans 'Editar' %}
+                                </button>
+                            </a>
+                        {% endif %}
+                        {% if username != user.username %}
+                            <button class="btn btn-article-action js-follow-user follow {{ following_class }}" data-user-id="{{ id_user }}">
+                                {{ following_class|capfirst }}
+                            </button>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endif %}
+                <hr>
+        {% endif %}
+
+    </section>
+
+     {% if articles_list|length > 0 %}
+         <section>
+             {% include 'articles/includes/article_loop.html' %}
+         </section>
+    {% endif %}
+    <script type="text/javascript">
+        document.addEventListener('articleInteractions:ready', function () {
+{#            article.detail.idArticle = {{ article.id }}#}
+            article.interactions.load()
+        })
+    </script>
+{% endblock%}

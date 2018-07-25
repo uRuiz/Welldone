@@ -1,0 +1,189 @@
+{% extends 'template.html' %}
+{% load i18n %}
+{% block title %}
+    {{ article.title }} | Welldone
+{% endblock %}
+
+{% block body %}
+    <div class="row justify-content-center">
+    <article class="article-details col-lg-8 col-md-8 col-sm-12 col-xs-12 align-self-center">
+        <header>
+            {% if article.article_answered %}
+                <section class="article-answer">
+                <p>{% trans "Este artículo es en respuesta al artículo " %}<a href="{% url 'article_details' article.article_answered.user.username article.article_answered_id %}">{{ article.article_answered.title }}</a>{% trans " de " %}<a href="{% url 'user_profile' article.article_answered.user.username %}">{{ article.article_answered.user.first_name }} {{ article.article_answered.user.last_name }}</a></p>
+                </section>
+            {% endif%}
+
+            {% if article.media %}
+            <figure class="row mx-auto">
+                <div class="mx-auto">
+                    <img class="img-fluid img-media-detail" src="/media/{{ article.media }}" style="">
+                </div>
+            </figure>
+            {% endif %}
+            <section id="user-details" class="user-details-header">
+                <div class="user-details-header-img">
+                    <a href="{% url 'user_profile'  article.user.username %}">
+                        {% if article.user.user.photo %}
+                                <div class="profile-img" style="background-image: url('{{ article.user.user.photo.url }}');"></div>
+                            {% else %}
+                                <img class="img-thumbnail img-circle" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAACgCAMAAAC8EZcfAAAAgVBMVEX///8zMzMsLCwwMDAqKiomJibz8/NwcHAiIiIfHx8lJSX7+/uzs7Pl5eVsbGzCwsKrq6ubm5u8vLzS0tJTU1OlpaV7e3uQkJDe3t7r6+vIyMg4ODhgYGAZGRnY2Ng/Pz+Dg4NKSkpWVlZjY2MSEhKJiYkAAAB4eHhLS0tDQ0Oenp5mOk+1AAAE3klEQVR4nO2c13qjOhRGQVt0F4oxxWBcx+X9H3DAcc44OSRO0L/BF6wnWJ+kXVBB00ZGRkZGRkZGRkaQeA1mgze0yjtelqZRFOXzBj+oSayaZZJPh1ZriOKNtSsuVaXbTo1r1EhRIw13H2dD62Wni5CCGvT/I2gXDapnBq5sE3tQlPFwS9Gc793v9WpIWPN0CLs0vJ5IPNN7G8QimfQeLpPtSvxI7zaKcrXYrPvU8452a1B851ha/Y2il/x48B4wFr0Zxk9C9wtk0VPOybr51eGy7cPQ9EVHv2Yl5ux++czo7FcbGsw5MQtWsrtejbRMTr/57pfZpWUMC8ZZDv+o6tWIQ8EmOLHV/WrKyYsLCotLMMQI0oUrHQYGRFCXAY9fpBzCd2jB0tqkiy4tQisyYWizzRPMTyfCJ0MvcWB+teEB3nqFuPFrkBZ4kr0KFCB3qAJPcoBJgf8QG2jXEIEHEJ6tE7Umqw0jBvqlBXoA6zmeAec4x4bwDSLgxhKojfkIMBV6qC7hAw4uSrwjPkbqKMH1NKbFsAZ12r24oP4HVu2YBJ35iwvK5MUFxf7FBWmBStVsgqhUzSW4Q1Vjc/bia9BLOEodsJTw1GK9hBVjJkEb5ad5V5fBT8xggtoc+U38jg3chZtzNKwlcLs6Z/DTS2DLv17gP5qAzYymZRylBLkGNY6eH9jya1rMMMVyAxQM4VsfYMEpQ5QYsIa6Ab/3QRfosd0SHiXGFemnwTtC8PZbdEFPsVhCNzDx+4NYwXSHD+LVEbiN7jM0rARMM2bBszcDE8xY/PQDrN+aHlgES5QfkyBdYILZiqGZ0eURJmjuORah7cMEvYDjsxP50TRnaKipAn40cVQS6EmTt2E4q4NeC/DhfrobAv209RZ+HLvCnmjjG9YCe1EvRicaiW1YtQxd7XCHJHd08CIkXB15A7w7g79gBt4Fxh1BvBOVUEG5BPtpGXYEHWiabjAtZLUjQvtp2gQpaDNcccxmOENx5nh3kG4dTC4kF32z7J0Askso9CPbbfRsAxAs2K5RN4bKY0gV8PShBeWLrLTjfQ+hfB4hTqzPIdQF4W3WJ9S/ntBt1idUT47pzPwkJ1VsaqCnN60o3ufH3VP4CrVFSILbT4uUvp74Z1gzlQ7FHP4nqEpXVPBfIi3kCiezbtDDc+1MYReE4RlJC3FnQbHv5QFv3vlgkbsO30nPnRchZ6v6D7PrfjB3r/ofXQ8lcHdWn9D1egAVPf0Toms5xl0JfYLfsSfsTbDr65LeBK8dqzH18pOA5o1n1zxIi2sP/yUJFb7dibYBa6oxpz6p7SCR68wipp4ri2KLbPXtI+HMQvxMZ5NkVtnd/1HxUVEUAba1DpeLlQDZvSnK7QlUmM0sP5VO19+PfA1Jh/ypcu2b5puLw/Fm7eZor5JcKajDZE/4sXtUNPST37XLToNiJXmuHD0qCjovfx8wdb47HwxkVHznKMsqnv4mN6bhUgfku9842oY1Wf8sYuqEt7NZF147wj1v/Of5e31crAawu0FSP8/8b4bRzJKqHMru7ijssvBb16O3nlhC5W9GMG7r8XM/kU2OW/6U8mOEcTn5D81ttBlu4X1BXR+2++AWM9PbwnstvRsk3LJKUo1eYuF9ARmuNrTDM0ZBVUZBVUZBVUZBVV5e8C8dP2Dbh5RuQgAAAABJRU5ErkJggg==">
+                            {% endif %}
+                    </a>
+                </div>
+
+                <div class="user-details-header-name-interactions">
+                    <a href="{% url 'user_profile' article.user.username %}">
+                        <p class="user-full-name">{{ article.user.first_name }} {{ article.user.last_name }}</p>
+                    </a>
+                    <div class="user-interactions">
+                        <a href="#comments">
+                            <p>
+                                <span class="article-details-counter" id="comments-counter">{{ article.comment_set.count }}</span>
+                                <i class="fa fa-comments article-comments-icon"></i>
+                            </p>
+                        </a>
+                        <a href="#responses">
+                            <p>
+                                <span class="article-details-counter">{{ article.responses_count }}</span>
+                                <i class="fa fa-reply"></i>
+                            </p>
+                        </a>
+                    </div>
+                </div>
+                <div class="article-details-follow">
+                    {% include 'articles/includes/follow_button.html' %}
+                </div>
+                {% if user == article.user %}
+                    <div class="article-details-personal-cta">
+                        <a class="link_edit" href="{% url 'article_edit' pk=article.pk %}">
+                            <button class="btn btn-article-action article-details-edit">{% trans "Edit" %}</button>
+                        </a>
+                        <a class="link_edit" href="{% url 'article_delete' pk=article.pk %}">
+                            <button class="btn btn-article-action article-details-delete">{% trans "Eliminar" %}</button>
+                        </a>
+                    </div>
+
+                {% endif %}
+            </section>
+        </header>
+        <hr class="article-details-separator" />
+        <h1>{{ article.title }}</h1>
+        <p class="article-publication-date">
+            {{ article.publication_date|date:"M d, Y" }}
+        </p>
+        <p id="article-preview">
+            {{ article.introduction }}
+        </p>
+        <p id="article-body">
+            {{ article.text }}
+        </p>
+        <footer>
+
+            <section class="article-categories">
+                <ul class="list-inline">
+                    {% for category in article.categories.all %}
+                        <li class="list-inline-item"><a href="{% url "list_articles_category" category.name|slugify %}">#{{ category.name }}</a></li>
+                    {% endfor %}
+                </ul>
+            </section>
+        <hr />
+            <section class="article-share-favourite">
+                <p class="article-favourite">
+                    {% if user.is_authenticated %}
+                        <i class="fa {{ favourite_class }} js-favourites favorites" aria-hidden="true" data-article-id="{{ article.id }}"></i>
+                    {% else %}
+                        <i class="fa fa-heart-o js-handle-login-modal favorites" aria-hidden="true"></i>
+                    {% endif %}
+                    <span class="article-details-counter" id="favourite-counter-{{ article.id }}">{{ article.favourite_set.count }}</span>
+                </p>
+
+                <div class="article-share">
+                    <i class="fa fa-twitter-square icon-fixed-width"></i>
+                    <i class="fa fa-facebook-square icon-fixed-width"></i>
+                </div>
+
+            </section>
+        <hr />
+            <section class="user-details-footer">
+                <div class="user-details-footer-img">
+                    <a href="{% url 'user_profile' article.user.username %}">
+                        {% if article.user.user.photo %}
+                            <div class="profile-img" style="background-image: url('{{ article.user.user.photo.url }}');"></div>
+                        {% else %}
+                            <img class="img-thumbnail img-circle" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAACgCAMAAAC8EZcfAAAAgVBMVEX///8zMzMsLCwwMDAqKiomJibz8/NwcHAiIiIfHx8lJSX7+/uzs7Pl5eVsbGzCwsKrq6ubm5u8vLzS0tJTU1OlpaV7e3uQkJDe3t7r6+vIyMg4ODhgYGAZGRnY2Ng/Pz+Dg4NKSkpWVlZjY2MSEhKJiYkAAAB4eHhLS0tDQ0Oenp5mOk+1AAAE3klEQVR4nO2c13qjOhRGQVt0F4oxxWBcx+X9H3DAcc44OSRO0L/BF6wnWJ+kXVBB00ZGRkZGRkZGRkaQeA1mgze0yjtelqZRFOXzBj+oSayaZZJPh1ZriOKNtSsuVaXbTo1r1EhRIw13H2dD62Wni5CCGvT/I2gXDapnBq5sE3tQlPFwS9Gc793v9WpIWPN0CLs0vJ5IPNN7G8QimfQeLpPtSvxI7zaKcrXYrPvU8452a1B851ha/Y2il/x48B4wFr0Zxk9C9wtk0VPOybr51eGy7cPQ9EVHv2Yl5ux++czo7FcbGsw5MQtWsrtejbRMTr/57pfZpWUMC8ZZDv+o6tWIQ8EmOLHV/WrKyYsLCotLMMQI0oUrHQYGRFCXAY9fpBzCd2jB0tqkiy4tQisyYWizzRPMTyfCJ0MvcWB+teEB3nqFuPFrkBZ4kr0KFCB3qAJPcoBJgf8QG2jXEIEHEJ6tE7Umqw0jBvqlBXoA6zmeAec4x4bwDSLgxhKojfkIMBV6qC7hAw4uSrwjPkbqKMH1NKbFsAZ12r24oP4HVu2YBJ35iwvK5MUFxf7FBWmBStVsgqhUzSW4Q1Vjc/bia9BLOEodsJTw1GK9hBVjJkEb5ad5V5fBT8xggtoc+U38jg3chZtzNKwlcLs6Z/DTS2DLv17gP5qAzYymZRylBLkGNY6eH9jya1rMMMVyAxQM4VsfYMEpQ5QYsIa6Ab/3QRfosd0SHiXGFemnwTtC8PZbdEFPsVhCNzDx+4NYwXSHD+LVEbiN7jM0rARMM2bBszcDE8xY/PQDrN+aHlgES5QfkyBdYILZiqGZ0eURJmjuORah7cMEvYDjsxP50TRnaKipAn40cVQS6EmTt2E4q4NeC/DhfrobAv209RZ+HLvCnmjjG9YCe1EvRicaiW1YtQxd7XCHJHd08CIkXB15A7w7g79gBt4Fxh1BvBOVUEG5BPtpGXYEHWiabjAtZLUjQvtp2gQpaDNcccxmOENx5nh3kG4dTC4kF32z7J0Askso9CPbbfRsAxAs2K5RN4bKY0gV8PShBeWLrLTjfQ+hfB4hTqzPIdQF4W3WJ9S/ntBt1idUT47pzPwkJ1VsaqCnN60o3ufH3VP4CrVFSILbT4uUvp74Z1gzlQ7FHP4nqEpXVPBfIi3kCiezbtDDc+1MYReE4RlJC3FnQbHv5QFv3vlgkbsO30nPnRchZ6v6D7PrfjB3r/ofXQ8lcHdWn9D1egAVPf0Toms5xl0JfYLfsSfsTbDr65LeBK8dqzH18pOA5o1n1zxIi2sP/yUJFb7dibYBa6oxpz6p7SCR68wipp4ri2KLbPXtI+HMQvxMZ5NkVtnd/1HxUVEUAba1DpeLlQDZvSnK7QlUmM0sP5VO19+PfA1Jh/ypcu2b5puLw/Fm7eZor5JcKajDZE/4sXtUNPST37XLToNiJXmuHD0qCjovfx8wdb47HwxkVHznKMsqnv4mN6bhUgfku9842oY1Wf8sYuqEt7NZF147wj1v/Of5e31crAawu0FSP8/8b4bRzJKqHMru7ijssvBb16O3nlhC5W9GMG7r8XM/kU2OW/6U8mOEcTn5D81ttBlu4X1BXR+2++AWM9PbwnstvRsk3LJKUo1eYuF9ARmuNrTDM0ZBVUZBVUZBVUZBVV5e8C8dP2Dbh5RuQgAAAABJRU5ErkJggg==">
+                        {% endif %}
+                    </a>
+                </div>
+                <a href="{% url 'user_profile' article.user.username %}">
+                    <p class="user-details-footer-full-name">{{ article.user.first_name }} {{ article.user.last_name }}</p>
+                </a>
+
+                <div class="user-details-footer-follow">
+                    {% include 'articles/includes/follow_button.html' %}
+                </div>
+
+            </section>
+        </footer>
+        <hr class="article-details-separator" />
+        <section id="comments">
+            <div id="article-comments-form">
+                <form id="coment-form">
+                    <h2>{% trans "¡Añade tu comentario!" %}</h2>
+                    <div><textarea name="comment-text" id="comment-text"></textarea></div>
+                    {% if user.is_authenticated %}
+                        <button class="btn btn-comment" >{% trans "Comentar" %}</button>
+                    {% else %}
+                        <button class="btn btn-comment js-handle-login-modal" >{% trans "Comentar" %}</button>
+                    {% endif %}
+                </form>
+
+            </div>
+            <div id="article-comments"></div>
+            {% if articles_list_resp|length == 0 %}
+                <hr />
+            {% endif %}
+        </section>
+    </article>
+    </div>
+
+    <section id="responses">
+        <div class="row justify-content-center">
+            <div class="article-details col-lg-8 col-md-8 col-sm-12 col-xs-12 align-self-center">
+                <div class="article-response">
+                    <h2>{% trans "¡Responde al artículo!" %}</h2>
+                    <a class="link_edit" href="{% url 'article_create' %}?responseFrom={{ article.id }}">
+                        {% if user.is_authenticated %}
+                            <button class=" btn btn-article-action">
+                                {% trans "Responder con un artículo" %}
+                            </button>
+                        {% else %}
+                            <button class=" btn btn-article-action js-handle-login-modal">
+                                {% trans "Responder con un artículo" %}
+                            </button>
+                        {% endif %}
+                    </a>
+                </div>
+            </div>
+        </div>
+        {% if articles_list_resp|length > 0 %}
+            {% include 'articles/includes/article_loop.html' with articles_list=articles_list_resp%}
+        {% endif %}
+    </section>
+    <script type="text/javascript">
+        document.addEventListener('shareSocial:ready', function () {
+        	shareSocial.title = '{{ article.title }}'
+            shareSocial.url = window.location.href
+            shareSocial.load()
+        });
+
+        document.addEventListener('articleDetails:ready', function () {
+        	article.detail.idArticle = {{ article.id }}
+            article.detail.load()
+        })
+        document.addEventListener('articleInteractions:ready', function () {
+        	article.interactions.onDetailsView = true
+            article.interactions.load()
+        })
+    </script>
+{% endblock %}

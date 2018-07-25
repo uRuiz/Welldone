@@ -1,0 +1,49 @@
+
+// Font families
+$main-font-family: "Helvetica", sans-serif;
+$titles-font-family: $main-font-family;
+$body-font-family: $main-font-family;
+
+// Font sizes:
+$font-size-base: 14px;
+$font-size-small: $font-size-base - 2px;
+$font-size-large: $font-size-base + 4px;
+
+$font-size-nav: 20px;
+$article-detail-title: 40px;
+$article-detail-body: 21px;
+$article-detail-text: 18px;
+
+//Desktop
+$desktop-article-list-text: $font-size-base;
+$desktop-article-list-body: $font-size-large;
+$desktop-article-list-title: 29px;
+
+//Mobile
+$mobile-article-list-text: $font-size-base;
+$mobile-article-list-body: 15px;
+$mobile-article-list-title: 25px;
+
+// Media queries
+$desktop-width: 992px;
+$tablet-width: 768px;
+$phone-width: $tablet-width - 1px;
+
+//Main colors
+$color-primary: #607D8B;
+$color-dark-primary: #455A64;
+$color-light-primary: #CFD8DC;
+$color-text-primary: #212121;
+$color-text-contrast: #FFFFFF; //text and icons
+$color-text-secondary: #757575;
+$color-cta-primary: #FF8C00; //accent
+$color-divider: #BDBDBD;
+$color-white: #ffffff;
+$color-black: #000000;
+$color-cta-delete: red;
+
+// Components colors
+$main-text-color: $color-text-primary;
+$body-background-color: $color-white;
+
+

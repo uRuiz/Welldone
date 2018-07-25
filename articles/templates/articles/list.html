@@ -1,0 +1,33 @@
+{% extends 'template.html' %}
+{% load i18n %}
+{% block title %}
+    {% trans "Listado de artículos" %} | Welldone
+{% endblock %}
+
+{% block subnavbar %}
+    {% include 'includes/subnavbar.html' %}
+{% endblock %}
+
+{% block body %}
+    {% if articles_list|length > 0 %}
+        {% include 'articles/includes/article_loop.html' %}
+    {% else %}
+        <div class="jumbotron">
+            <p>{% trans "No se han encontrado articulos por este filtro." %}</p>
+            <p>{% trans "¡Puedes ser el primero en escribirlo!" %}</p>
+            <p>
+                <a class="link_edit" href="{% url 'article_create' %}">
+                    <button class="btn btn-article-action article-list-create">
+                        {% trans "Escribe un artículo" %}
+                    </button>
+                </a>
+            </p>
+        </div>
+    {% endif %}
+
+    <script type="text/javascript">
+        document.addEventListener('articleInteractions:ready', function () {
+            article.interactions.load()
+        })
+    </script>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'template.html' %}
+{% load i18n %}
+{% block title %}
+    {% trans "Nuevo art&iacute;culo" %} | Welldone
+{% endblock %}
+
+{% block body %}
+    {% autoescape off %}
+        {% if message %} <p>{{ message|safe }}</p> {% endif %}
+    {% endautoescape %}
+    <form method="post" enctype="multipart/form-data" novalidate>
+        {% csrf_token %}
+        {% load crispy_forms_tags %}
+        {% if response_id %}
+            <input class="textinput textInput form-control" id="id_article_answered" name="id_article_answered" type="hidden" value="{{ response_id }}">
+            <div id="div_id_article_answered" class="form-group">
+                <label for="id_article_answered" class="control-label">{% trans "En respuesta:" %} <strong>{{ response_title }}</strong></label>
+            </div>
+        {% endif %}
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-6 col-sm-10">
+            {{ form|crispy }}
+
+                <input type="submit" value="{% trans "Guardar artículo"%}" class="btn btn-primary"/>
+            </div>
+        </div>
+
+
+    </form>
+{% endblock %}

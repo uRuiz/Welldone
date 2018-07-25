@@ -1,0 +1,10 @@
+.has-error {
+  color: #a94442;
+
+  input {
+    border: 1px #a94442 solid;
+    &:focus {
+      border: 1px red solid;
+    }
+  }
+}

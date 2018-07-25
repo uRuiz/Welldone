@@ -1,0 +1,33 @@
+.publication-date {
+  margin-bottom: 0px;
+  font-size: 12px;
+}
+
+.pagination-block {
+  margin-top: 10px;
+}
+
+.article-list-create {
+  float: left;
+}
+
+.img-media-list {
+  object-fit: cover;
+  width: 100% !important;
+  height: auto;
+
+  @include if-is-tablet {
+    min-height: 470px;
+    max-height: 470px;
+  }
+  @include if-is-phone {
+    min-height: 300px;
+    max-height: 300px;
+  }
+
+  @include if-is-desktop {
+    min-height: 470px;
+    max-height: 470px;
+  }
+
+}

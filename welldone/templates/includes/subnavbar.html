@@ -1,0 +1,17 @@
+{% load i18n %}
+<div class="sub-navbar">
+    <!--<div class="sub-navbar-search">
+        <a href="#"><i class="fa fa-search fa-2x icon-fixed-width" aria-hidden="true"></i></a>
+    </div>-->
+    <div class="sub-navbar-action">
+        <div class="btn-group dropdown filter-button">
+            <button type="button" class="btn btn-article-action dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                {% trans "Ordenar"%} <span class="caret"></span>
+            </button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="?order=asc">{% trans " Fecha ascendente"%}</a>
+                <a class="dropdown-item" href="?order=desc">{% trans "Fecha descendente" %}</a>
+            </div>
+        </div>
+    </div>
+</div>

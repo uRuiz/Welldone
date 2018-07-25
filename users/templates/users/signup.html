@@ -1,0 +1,21 @@
+{% extends "template.html" %}
+{% load i18n %}
+
+{% block title %}
+    {% trans "Alta de usuario" %}
+{% endblock%}
+{% block body %}
+    <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 mx-auto">
+        <h1>{% trans "Alta de usuario" %}</h1>
+
+        {% if user.is_authenticated%}
+            <h3>{% trans "Si quieres crear otro usuario debes cerrar sesión" %}</h3>
+        {% else %}
+            {% load crispy_forms_tags %}
+            <form method="post" novalidate>
+                {%  crispy form %}
+            </form>
+        {% endif %}
+    </div>
+
+{% endblock%}

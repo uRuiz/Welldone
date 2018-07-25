@@ -1,0 +1,191 @@
+.article-list {
+  max-width: 394px;
+  height: 400px;
+  margin: auto auto 20px auto;
+  @include if-is-tablet {
+    max-width: 660px;
+    height: 470px;
+  }
+}
+
+.article-list-no-media{
+  display: flex;
+  flex-direction: column;
+  max-width: 394px;
+  height: 216px;
+  color: $color-white;
+  margin: auto auto 20px auto;
+  background-color: transparentize($color-dark-primary, 0.15);
+  @include if-is-tablet {
+    max-width: 660px;
+    height: 260px;
+  }
+
+}
+
+.article-header {
+  background-color: transparentize($color-dark-primary, 0.15);
+  color: $color-white;
+  height: 216px;
+  top: 184px;
+  padding: 0;
+  @include if-is-tablet{
+    height: 260px;
+    top: 210px;
+  }
+}
+
+.img-media{
+  margin: auto;
+  display: inherit;
+  height: 400px;
+  @include if-is-tablet {
+    height: 470px;
+  }
+}
+
+.article-list-title{
+  margin: 20px 20px 0 20px;
+  @include if-is-phone {
+    margin: 10px 5px 13px 5px;
+  }
+
+  h2 {
+    margin: 0;
+    color: $color-white;
+    font-size: $desktop-article-list-title;
+    font-weight: bold;
+    @include if-is-phone {
+      font-size: $mobile-article-list-title;
+    }
+  }
+
+}
+
+.ellipsis-title {
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  @include if-is-phone {
+      -webkit-line-clamp: 2;
+  }
+}
+
+.ellipsis-introduction {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  margin: 0 20px 20px 0;
+  @include if-is-phone {
+    float: left;
+    margin: 10px 5px 9px 5px;
+  }
+}
+
+.article-user-info {
+  @include if-is-tablet {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  .article-list-user-picture {
+    margin: 20px;
+
+    @include if-is-phone {
+      float: left;
+      margin: 0 5px 5px 5px;
+    }
+
+    .profile-img-thumbnail {
+      max-width: 100px;
+      width: 100px;
+      height: 100px;
+      @include if-is-phone {
+        width:         40px;
+        height:        40px;
+      }
+    }
+  }
+
+  .separator {
+    margin-left: 5px;
+    margin-right: 5px;
+    @include if-is-phone {
+      margin-left: 1px;
+      margin-right: 1px;
+    }
+  }
+
+  .separator-middle {
+    @extend .separator;
+    @include if-is-phone {
+      display: none;
+    }
+  }
+
+  .article-details-counter {
+    margin-left: auto;
+    margin-right: 5px;
+  }
+
+  .favorites {
+    margin-right: 20px;
+    @include if-is-phone {
+      margin-right: 5px;
+    }
+  }
+}
+
+.article-list-hearth{
+  font-size: 12px;
+  text-align: right;
+  @include if-is-tablet {
+    font-size: 16px;
+  }
+  @include if-is-desktop {
+    font-size: 21px;
+  }
+}
+
+.article-list-info {
+  font-size: $font-size-base;
+
+  .article-list-user {
+    @include if-is-tablet {
+      width: 528px;
+    }
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: $desktop-article-list-text;
+
+    .article-list-info-row {
+      @include if-is-tablet {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        font-size: $desktop-article-list-text;
+      }
+    }
+  }
+
+  .article-list-introduction {
+    font-size: $desktop-article-list-body;
+    margin: 0;
+    @include if-is-phone {
+      font-size: $mobile-article-list-body;
+    }
+  }
+}
+

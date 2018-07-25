@@ -1,0 +1,205 @@
+{% load i18n %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>{% block title %} Welldone {% endblock %}</title>
+    <link rel="icon" href="{% static 'images/favicon.ico'%}"/>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% if article %}
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "NewsArticle",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://welldone.trendisimo.es/{{ request.get_full_path }}"
+  },
+  "headline": "{{ article.title }}",
+  {% if article.media != "" %}
+  "image": {
+    "@type": "ImageObject",
+    "url": "{% with 'http://welldone.trendisimo.es/'|add:article.media as article_media %}
+     {{ article_media }}
+    {% endwith %}",
+    "height": 100,
+    "width": 100
+  },
+  {% endif %}
+
+  "datePublished": "{{ article.publication_date|date:'Y-m-d H:i' }}",
+  "dateModified": "{{ article.modification_date|date:'Y-m-d H:i' }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ article.user.first_name }} {{ article.user.last_name }}"
+  },
+   "publisher": {
+    "@type": "Organization",
+    "name": "Welldone"
+  },
+  "description": "{{ article.introduction }}"
+}
+</script>
+{% endif %}
+{% if articles_list %}
+    {% for article in articles_list %}
+        <script type="application/ld+json">
+        {
+          "@context": "http://schema.org",
+          "@type": "NewsArticle",
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http://welldone.trendisimo.es/@{{ article.user.username }}/{{ article.pk }}"
+          },
+          "headline": "{{ article.title }}",
+          {% if article.media != "" %}
+          "image": {
+            "@type": "ImageObject",
+            "url": "{% with 'http://welldone.trendisimo.es/'|add:article.media as article_media %}
+             {{ article_media }}
+            {% endwith %}",
+            "height": 100,
+            "width": 100
+          },
+          {% endif %}
+
+          "datePublished": "{{ article.publication_date|date:'Y-m-d H:i' }}",
+          "dateModified": "{{ article.modification_date|date:'Y-m-d H:i' }}",
+          "author": {
+            "@type": "Person",
+            "name": "{{ article.user.first_name }} {{ article.user.last_name }}"
+          },
+           "publisher": {
+            "@type": "Organization",
+            "name": "Welldone"
+          },
+          "description": "{{ article.introduction }}"
+        }
+        </script>
+    {% endfor %}
+{% endif %}
+</head>
+<body>
+<div class="main">
+    <header class="navbar navbar-default header">
+        <div class="container-fluid " style="width: 100%">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-8 col-sm-2 col-xs-4 top-header">
+                    <h3><a href="/">Welldone</a></h3>
+                        <div class="user-area">
+                            {% if user.is_authenticated %}
+                            <div class="dropdown" style="width: 70px; float:right">
+                            {% if user.user.photo %}
+                                <div class="profile-img user-picture dropdown-toggle" style="background-image: url('{{ user.user.photo.url }}');"></div>
+                            {% else %}
+                                <img class="img-thumbnail dropdown-toggle user-picture" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAACgCAMAAAC8EZcfAAAAgVBMVEX///8zMzMsLCwwMDAqKiomJibz8/NwcHAiIiIfHx8lJSX7+/uzs7Pl5eVsbGzCwsKrq6ubm5u8vLzS0tJTU1OlpaV7e3uQkJDe3t7r6+vIyMg4ODhgYGAZGRnY2Ng/Pz+Dg4NKSkpWVlZjY2MSEhKJiYkAAAB4eHhLS0tDQ0Oenp5mOk+1AAAE3klEQVR4nO2c13qjOhRGQVt0F4oxxWBcx+X9H3DAcc44OSRO0L/BF6wnWJ+kXVBB00ZGRkZGRkZGRkaQeA1mgze0yjtelqZRFOXzBj+oSayaZZJPh1ZriOKNtSsuVaXbTo1r1EhRIw13H2dD62Wni5CCGvT/I2gXDapnBq5sE3tQlPFwS9Gc793v9WpIWPN0CLs0vJ5IPNN7G8QimfQeLpPtSvxI7zaKcrXYrPvU8452a1B851ha/Y2il/x48B4wFr0Zxk9C9wtk0VPOybr51eGy7cPQ9EVHv2Yl5ux++czo7FcbGsw5MQtWsrtejbRMTr/57pfZpWUMC8ZZDv+o6tWIQ8EmOLHV/WrKyYsLCotLMMQI0oUrHQYGRFCXAY9fpBzCd2jB0tqkiy4tQisyYWizzRPMTyfCJ0MvcWB+teEB3nqFuPFrkBZ4kr0KFCB3qAJPcoBJgf8QG2jXEIEHEJ6tE7Umqw0jBvqlBXoA6zmeAec4x4bwDSLgxhKojfkIMBV6qC7hAw4uSrwjPkbqKMH1NKbFsAZ12r24oP4HVu2YBJ35iwvK5MUFxf7FBWmBStVsgqhUzSW4Q1Vjc/bia9BLOEodsJTw1GK9hBVjJkEb5ad5V5fBT8xggtoc+U38jg3chZtzNKwlcLs6Z/DTS2DLv17gP5qAzYymZRylBLkGNY6eH9jya1rMMMVyAxQM4VsfYMEpQ5QYsIa6Ab/3QRfosd0SHiXGFemnwTtC8PZbdEFPsVhCNzDx+4NYwXSHD+LVEbiN7jM0rARMM2bBszcDE8xY/PQDrN+aHlgES5QfkyBdYILZiqGZ0eURJmjuORah7cMEvYDjsxP50TRnaKipAn40cVQS6EmTt2E4q4NeC/DhfrobAv209RZ+HLvCnmjjG9YCe1EvRicaiW1YtQxd7XCHJHd08CIkXB15A7w7g79gBt4Fxh1BvBOVUEG5BPtpGXYEHWiabjAtZLUjQvtp2gQpaDNcccxmOENx5nh3kG4dTC4kF32z7J0Askso9CPbbfRsAxAs2K5RN4bKY0gV8PShBeWLrLTjfQ+hfB4hTqzPIdQF4W3WJ9S/ntBt1idUT47pzPwkJ1VsaqCnN60o3ufH3VP4CrVFSILbT4uUvp74Z1gzlQ7FHP4nqEpXVPBfIi3kCiezbtDDc+1MYReE4RlJC3FnQbHv5QFv3vlgkbsO30nPnRchZ6v6D7PrfjB3r/ofXQ8lcHdWn9D1egAVPf0Toms5xl0JfYLfsSfsTbDr65LeBK8dqzH18pOA5o1n1zxIi2sP/yUJFb7dibYBa6oxpz6p7SCR68wipp4ri2KLbPXtI+HMQvxMZ5NkVtnd/1HxUVEUAba1DpeLlQDZvSnK7QlUmM0sP5VO19+PfA1Jh/ypcu2b5puLw/Fm7eZor5JcKajDZE/4sXtUNPST37XLToNiJXmuHD0qCjovfx8wdb47HwxkVHznKMsqnv4mN6bhUgfku9842oY1Wf8sYuqEt7NZF147wj1v/Of5e31crAawu0FSP8/8b4bRzJKqHMru7ijssvBb16O3nlhC5W9GMG7r8XM/kU2OW/6U8mOEcTn5D81ttBlu4X1BXR+2++AWM9PbwnstvRsk3LJKUo1eYuF9ARmuNrTDM0ZBVUZBVUZBVUZBVV5e8C8dP2Dbh5RuQgAAAABJRU5ErkJggg==">
+                            {% endif %}
+                                <div class="dropdown-menu custom-menu">
+                                    <a class="dropdown-item" href="{% url 'article_create' %}">{% trans "Escribir articulo" %}</a>
+                                    <a class="dropdown-item" href="{% url 'user_profile' user.username %}">{% trans "Mi perfil" %}</a>
+                                    <a class="dropdown-item" href="{% url 'list_articles_user' user.username %}">{% trans "Mis articulos" %}</a>
+                                    <a class="dropdown-item" href="{% url 'list_user_following' user.username %}">{% trans "Siguiendo" %}</a>
+                                    <a class="dropdown-item" href="{% url 'list_user_followed' user.username %}">{% trans "Seguido" %}</a>
+                                    <a class="dropdown-item" href="{% url "list_favourites_user" user.username %}">{% trans "Mis favoritos" %}</a>
+{#                                    <a class="dropdown-item" href="#">Mis menciones</a>#}
+{#                                    <a class="dropdown-item" href="#">Mis subrayados</a>#}
+{#                                    <a class="dropdown-item" href="#">Mis comentarios</a>#}
+                                    <a class="dropdown-item" href="{% url 'users_logout' %}">{% trans "Logout" %}</a>
+                                </div>
+                            </div>
+                            {% else %}
+                                <h5 style="float: right"><a href="{% url 'users_login' %}">{% trans "Login" %}</a> / <a href="{% url 'users_signin' %}">{% trans "Register" %}</a></h5>
+                            {% endif %}
+                        </div>
+                </div>
+            </div>
+        </div>
+        <!--menu-->
+        <nav class="main-menu fold" id="main-menu">
+            <div class="fila">
+                <a href="#" id="pull"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAXCAYAAAD+4+QTAAAAAXNSR0IArs4c6QAAAM9JREFUSA1j/P///3oGBoYAIKYV2MAItOQ/rUyHmcsEY9CSBllymZYWgMwHBRcbkKFCQ4vu0NBshNEgn5QAud5AzIgQphoLlKi2giz5DWSwUM1YTIP+0C0Jv8G0nKoib0A+0QUaaUtVY1ENO4zKpREP5BM7oNmOQEyr1LUfZMkHoAX8NPIEyNiPdEtdP2noC5DRP0E+SQAyvEA8GoFtNDIX1ViQTwSBQnpATKvUdQlkyT2gBYqodlOVd59uqYuqzsZmGKiInwXEgdgkqSS2HgDhX0bHTktyDAAAAABJRU5ErkJggg=="
+                                           alt={% trans "MENÚ de navegación" %}></a>
+                <ul class="nav-menu" style="overflow: hidden; display: block;">
+                    <li class=" categories "><a href="{% url 'list_articles_category'  "startup" %}">{% trans "Startup" %}</a></li>
+                    <li class=" categories "><a href="{% url 'list_articles_category'  "marketing" %}">{% trans "Marketing" %}</a></li>
+                    <li class=" categories "><a href="{% url 'list_articles_category'  "productivity" %}">{% trans "Productivity" %}</a></li>
+                    <li class=" categories "><a href="{% url 'list_articles_category'  "design" %}">{% trans "Design" %}</a></li>
+                    <li class=" categories "><a href="{% url 'list_articles_category'  "copywriting" %}">{% trans "Copywriting" %}</a></li>
+                    {% if user.is_authenticated %}
+                            <li class=" user-actions ">
+                            <a href="{% url 'article_create' %}"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAAXNSR0IArs4c6QAAAX1JREFUSA29lL1OwzAUhVPUMWKtKoSQWEDiFZAKEgtPwAA8BC8CLwAjaycQDB34fQImkLpSMQMbEL6TJlVinDg2Ua90avvm3vOptpMoajmSJInRKZqgEVptFYFhF92jYowW2qLg2iG+8BsanhsivxhJn+WY4j30gy7wOgN0wiiPY/0QlxGJ0BjTuIx0BvkWfTM/lDPjEbpDcSjEBsAvjSKoK2BHaU2yOGB8yxc14xPPPtEV2rTU3ZLbZuum3lP47HfF0vAnRXVxi2bN2URbF5eajAonRAYoPwOjPc3r+WIwpCFAl+E6COIB0KUovxYkimHdLgqabFGPOgEUfhAanABtDXU7cs+iBKn9rNCgW1J1TR94tss1/RCkLmohNO4j23vQGCC4C7KlIiO8AOp1QQb/Bag//bYYRumS81hj0kcTpM/EDTpvcgbUlaISQtU7Wsf0udQRsKiEYP4a4GdtcZ2Jtck3af6TJc7C1yOv7+UTczQhj2ZBG+u5bNdcIL8Y2WnxxZs0RwAAAABJRU5ErkJggg=="
+                                         alt={% trans "Escribir artículo" %}></a>
+                            <a href="{% url 'list_articles_user' user.username %}"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAZCAYAAAA14t7uAAAAAXNSR0IArs4c6QAAASBJREFUSA1j/P///ysG8oAkUJsnEF9iZGR8hGEE0GByATNQYy4Q3wNiOXSDmdAFyOArAvUcQDecGgaD3IJhOAuaC08C+T/RxNC5SkABGajgMyB9CElBI9DlGcAw/8kAZCADWSRFWJlAxV1QDcxYFUAFGUGKkBTsBLK/I/GxMXWAgipAvBGIkfUiq72LbjCyJCXss9SKPAxHoEdePVDFewxVxAnoAZWlwJVCIwJGKQAZoIRPDg6GGQKkz6C7+D7cRgoZNAtjmhmMHhQmwBAA5SZygAdQ0zyYRnSDLYASb2CSJNLayOqHfgY5C/QOodIN2cfIbCEgRwMugJSoQUyCpRtcIxoDqDcAySyMDDIDKPkNTQ+xXGlkhUMv8miW82hmMADvUf9lNjnw6QAAAABJRU5ErkJggg=="
+                                         alt={% trans "Mis artículos" %}></a>
+                                {% if user.user.photo %}
+                                    <a href="{% url 'user_profile' user.username %}"><img class="profile-img " style="background-image: url('{{ user.user.photo.url }}');"></a>
+                                {% else %}
+                                    <a href="{% url 'user_profile' user.username %}"><img class="img-thumbnail" style="width: 50px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAACgCAMAAAC8EZcfAAAAgVBMVEX///8zMzMsLCwwMDAqKiomJibz8/NwcHAiIiIfHx8lJSX7+/uzs7Pl5eVsbGzCwsKrq6ubm5u8vLzS0tJTU1OlpaV7e3uQkJDe3t7r6+vIyMg4ODhgYGAZGRnY2Ng/Pz+Dg4NKSkpWVlZjY2MSEhKJiYkAAAB4eHhLS0tDQ0Oenp5mOk+1AAAE3klEQVR4nO2c13qjOhRGQVt0F4oxxWBcx+X9H3DAcc44OSRO0L/BF6wnWJ+kXVBB00ZGRkZGRkZGRkaQeA1mgze0yjtelqZRFOXzBj+oSayaZZJPh1ZriOKNtSsuVaXbTo1r1EhRIw13H2dD62Wni5CCGvT/I2gXDapnBq5sE3tQlPFwS9Gc793v9WpIWPN0CLs0vJ5IPNN7G8QimfQeLpPtSvxI7zaKcrXYrPvU8452a1B851ha/Y2il/x48B4wFr0Zxk9C9wtk0VPOybr51eGy7cPQ9EVHv2Yl5ux++czo7FcbGsw5MQtWsrtejbRMTr/57pfZpWUMC8ZZDv+o6tWIQ8EmOLHV/WrKyYsLCotLMMQI0oUrHQYGRFCXAY9fpBzCd2jB0tqkiy4tQisyYWizzRPMTyfCJ0MvcWB+teEB3nqFuPFrkBZ4kr0KFCB3qAJPcoBJgf8QG2jXEIEHEJ6tE7Umqw0jBvqlBXoA6zmeAec4x4bwDSLgxhKojfkIMBV6qC7hAw4uSrwjPkbqKMH1NKbFsAZ12r24oP4HVu2YBJ35iwvK5MUFxf7FBWmBStVsgqhUzSW4Q1Vjc/bia9BLOEodsJTw1GK9hBVjJkEb5ad5V5fBT8xggtoc+U38jg3chZtzNKwlcLs6Z/DTS2DLv17gP5qAzYymZRylBLkGNY6eH9jya1rMMMVyAxQM4VsfYMEpQ5QYsIa6Ab/3QRfosd0SHiXGFemnwTtC8PZbdEFPsVhCNzDx+4NYwXSHD+LVEbiN7jM0rARMM2bBszcDE8xY/PQDrN+aHlgES5QfkyBdYILZiqGZ0eURJmjuORah7cMEvYDjsxP50TRnaKipAn40cVQS6EmTt2E4q4NeC/DhfrobAv209RZ+HLvCnmjjG9YCe1EvRicaiW1YtQxd7XCHJHd08CIkXB15A7w7g79gBt4Fxh1BvBOVUEG5BPtpGXYEHWiabjAtZLUjQvtp2gQpaDNcccxmOENx5nh3kG4dTC4kF32z7J0Askso9CPbbfRsAxAs2K5RN4bKY0gV8PShBeWLrLTjfQ+hfB4hTqzPIdQF4W3WJ9S/ntBt1idUT47pzPwkJ1VsaqCnN60o3ufH3VP4CrVFSILbT4uUvp74Z1gzlQ7FHP4nqEpXVPBfIi3kCiezbtDDc+1MYReE4RlJC3FnQbHv5QFv3vlgkbsO30nPnRchZ6v6D7PrfjB3r/ofXQ8lcHdWn9D1egAVPf0Toms5xl0JfYLfsSfsTbDr65LeBK8dqzH18pOA5o1n1zxIi2sP/yUJFb7dibYBa6oxpz6p7SCR68wipp4ri2KLbPXtI+HMQvxMZ5NkVtnd/1HxUVEUAba1DpeLlQDZvSnK7QlUmM0sP5VO19+PfA1Jh/ypcu2b5puLw/Fm7eZor5JcKajDZE/4sXtUNPST37XLToNiJXmuHD0qCjovfx8wdb47HwxkVHznKMsqnv4mN6bhUgfku9842oY1Wf8sYuqEt7NZF147wj1v/Of5e31crAawu0FSP8/8b4bRzJKqHMru7ijssvBb16O3nlhC5W9GMG7r8XM/kU2OW/6U8mOEcTn5D81ttBlu4X1BXR+2++AWM9PbwnstvRsk3LJKUo1eYuF9ARmuNrTDM0ZBVUZBVUZBVUZBVV5e8C8dP2Dbh5RuQgAAAABJRU5ErkJggg=="
+                                             alt="{% trans "Mi perfil" %}"></a>
+                                {% endif %}
+
+                            <a href="{% url 'list_user_following' user.username %}"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAAXNSR0IArs4c6QAAAlFJREFUSA2dlTFIlkEYx301RLJSNCKhBreaSoJ0MiIaahCNxIiscIsQopYg3NRBcAmhlsamoILQQV1EcKgWER0DXawEJSITlb5+/8+743i9831fH/h5zz3P/3mO9+6+s6IiYqVS6RZMwCrMwxicjMiLh2n2CkL2g+DF4h1TFTTpCXX3Ygv41amyYlMazHgNY+71Il0rA+KWQCwdyqNxNaFFNlw27uTRuOrQInMuG3fyaOLVHEIz/I4dBvHX8eoCGRpdhZXAQm+IHbWt8BOoNCQ2nnuk8AR0wzA8gUu2GP8uzMIuWNvGmYQuqzvUSIMmmIIsk6Yh1yIIq+A0HINGWAJr4zj60nNwHu6AvsSatHXBhUhom57DF/C3Y4e57C90B4sJkusFbZ3s3T4dwduwpuwB9sAvRNcGI+AeT/xHYK3N6Yk8hX82Exk/uwIcNLqFf4z2mc0x163TGycbK8dxOiBrARX4jfwFlsmdsYtoZD6gAmxekxoI/SYkSFuHaXCExC+T1PPf7C9gNLoIsjU9K/fgbFoUmdconiTJLsOi0egsrhjfH8paAltapNPPZPiXvfxN/K+gHnoJ0s9/q9F+03bl3Sp9+k84bopVWw+66rL7XryB+UY5ys9BQt37IvYWsXun8HWmF7wF9Ja9B5ke2lO6ai8Q3ABXaAtSYy1z2+wD/mPOZtXX0Etnq1daWynrR7N3hffm2X9p8hKsbeJ8hEEYgk+wBdZGsztGFHTog3XbKTDqSj/0y7O2yNc6nybaumvQDk2wA99B/zGn2aJNRmf/AfiVwS2Fz08MAAAAAElFTkSuQmCC"
+                                         alt={% trans "Siguiendo" %}></a>
+                            <a href="{% url 'list_user_followed' user.username %}"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAAXNSR0IArs4c6QAAAk9JREFUSA2dlj9IV1EUx30qomUlJpFDQy3VlCFkNAgqDTVIRVJIUbRFS9RiQ5s51RKKLo5NgQiSg7VEf4ZaEsHRoSFLIaHARKNfn2++c7m97v299zrw4Z57zvec+95993e1piZilUrlAszCMszDKLRF5OXDNBuHkH0h2FG+Y6aCJpdC3b3YAn5DpqzclAYvvYYx93SZrrUB8fFALBsqonE1oUXWXDbuFNG46tAib1027hTRxKv5CAfhe+xjEJ+IV5fI0KgHPgYWmiS2w1rhJ1Cbkli88EjhbhiAEbgNnVaMPwiv4CeYbeLMwXnT/ddIg3Z4DnkmTWuhRRDWwX5ohr2wCGbPcPSmR+AoXAa9iZm0e4ILkdA2DcF78Ldji7nsBwwEiwmSuwraOtnTf3QEL8KqslXsmhWi0Vs+BPe9lGN+E8xOml6JO/DLMpHxnSvYbnY/1X1jPGU5fJ063XGy0T9xnH7IW0AFd62RRuaH4JMSWHYhe4B5CRsh9JtQYdb6/UXShQ4j+poKVyzPXAdBtqpr5QocsGTO2BjI9xJrSeMLXt60G1rknJfIc0/4Ap5SbzYG+rW/Ab9XF3PZkrar6Fbp1Vdg13btX6fodSbeynwNZENaROe+jD1B7O4p/A5wfynxdZdNgUwX7b56nmoYzoArtCfNjDuZH4NBaKL4VpIky/DBdMT0bXVLn01j98i7w2C6qiNNHoPZOs40DMMDmIENMHtUtVm1JB1ugB1Za+iP+o/mut8jb4t8rfNpoq3rg25ohy34DPqL+YItWmd09hsI5r4klvSHWwAAAABJRU5ErkJggg=="
+                                         alt={% trans "Seguido" %}></a>
+                        </li>
+                        <li class="user-actions">
+                            <a href="{% url 'users_logout' %}">{% trans "Desconecta" %}</a>
+                        </li>
+                    {% else %}
+                        <li class="user-actions">
+                            <h5><a href="{% url 'users_login' %}">{% trans "Login" %}</a> / <a href="{% url 'users_signin' %}"> {% trans "Register" %}</a></h5>
+                        </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </nav>
+        <!--end menu-->
+    </header>
+    {% block subnavbar %}{% endblock %}
+
+    <main class="container-fluid ">
+        {% block body %}{% endblock %}
+    </main>
+</div>
+    <footer class="footer">
+        <p>&copy Welldone</p>
+    </footer>
+
+
+    <div id="js-login-modal" class="modal">
+      <div class="modal-content">
+        <span class="modal-close" id="js-login-modal-close">&times;</span>
+          <h2 style="">{% trans "¡Oops, debes estar registrado para hacer eso!" %}</h2>
+          <div class="modal-buttons-container">
+              <div class="section-login">
+                  <p>{% trans "Si ya estás registrado haz login aquí" %}</p>
+                  <a href="{% url 'users_login' %}">
+                    <button class="btn btn-article-action">{% trans "Inicia sesion" %}</button>
+                  </a>
+              </div>
+              <div class="section-register">
+                  <p>{% trans "Y si no estás registrado puedes hacerlo aquí" %}</p>
+                  <a href="{% url 'users_signin' %}">
+                    <button class=" btn btn-article-action">{% trans "Regístrate" %}</button>
+                  </a>
+              </div>
+          </div>
+      </div>
+    </div>
+    <script defer="defer" type="text/javascript" src="{% static "js/app.js" %}"></script>
+    <script type="text/javascript">
+        document.addEventListener('mainMenu:ready', function () {
+            mainMenu.load()
+        })
+    </script>
+    <script type="text/javascript">
+        document.addEventListener('loginModal:ready', function () {
+            loginModal.load()
+        })
+    </script>
+
+</body>
+</html>

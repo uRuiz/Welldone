@@ -1,0 +1,2123 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-31 19:48+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: articles/forms.py:68 articles/templates/articles/create.html:24
+msgid "Guardar artículo"
+msgstr "Save article"
+
+#: articles/forms.py:79
+msgid "Fecha de publicación"
+msgstr "Publication date"
+
+#: articles/models.py:28
+msgid "Imagen"
+msgstr "Image"
+
+#: articles/templates/articles/create.html:4
+msgid "Nuevo art&iacute;culo"
+msgstr "New article"
+
+#: articles/templates/articles/create.html:17
+msgid "En respuesta:"
+msgstr "In response to:"
+
+#: articles/templates/articles/detail.html:13
+msgid "Este artículo es en respuesta al artículo "
+msgstr "This article is in response to the article "
+
+#: articles/templates/articles/detail.html:13
+msgid " de "
+msgstr " of "
+
+#: articles/templates/articles/detail.html:60
+msgid "Edit"
+msgstr "Edit"
+
+#: articles/templates/articles/detail.html:63
+msgid "Eliminar"
+msgstr "Delete"
+
+#: articles/templates/articles/detail.html:132
+msgid "¡Añade tu comentario!"
+msgstr "Add your comment!"
+
+#: articles/templates/articles/detail.html:135
+#: articles/templates/articles/detail.html:137
+msgid "Comentar"
+msgstr "Comment"
+
+#: articles/templates/articles/detail.html:154
+msgid "¡Responde al artículo!"
+msgstr "Answer the article!"
+
+#: articles/templates/articles/detail.html:158
+#: articles/templates/articles/detail.html:162
+msgid "Responder con un artículo"
+msgstr "Reply with an article"
+
+#: articles/templates/articles/favourites.html:4
+msgid "Articulos favoritos"
+msgstr "Favourite articles"
+
+#: articles/templates/articles/favourites.html:16
+msgid "No tienes ningun articulo como favorito"
+msgstr "You have no favorite articles 😢"
+
+#: articles/templates/articles/favourites.html:17
+msgid "¡Esperamos que alguno te guste pronto!"
+msgstr "We hope you 😍 one soon!"
+
+#: articles/templates/articles/includes/article_list_user.html:25
+msgid "comments"
+msgstr "comments"
+
+#: articles/templates/articles/includes/article_list_user.html:27
+msgid "responses"
+msgstr "responses"
+
+#: articles/templates/articles/list.html:4
+msgid "Listado de artículos"
+msgstr "Articles list"
+
+#: articles/templates/articles/list.html:16
+msgid "No se han encontrado articulos por este filtro."
+msgstr "No articles were found by this filter. 😓"
+
+#: articles/templates/articles/list.html:17
+msgid "¡Puedes ser el primero en escribirlo!"
+msgstr "Be the first to write it!"
+
+#: articles/templates/articles/list.html:21
+msgid "Escribe un artículo"
+msgstr "Write an article"
+
+#: articles/views.py:43 articles/views.py:45
+msgid "No hemos encontrado este artículo"
+msgstr "Sorry! We did not find this article. 😚"
+
+#: env/site-packages/crispy_forms/tests/test_form_helper.py:134
+#: env/site-packages/crispy_forms/tests/test_form_helper.py:144
+#: env/site-packages/django/forms/fields.py:56
+#: env/site-packages/rest_framework/fields.py:303
+#: env/site-packages/rest_framework/relations.py:229
+#: env/site-packages/rest_framework/relations.py:262
+#: env/site-packages/rest_framework/validators.py:99
+#: env/site-packages/rest_framework/validators.py:183
+msgid "This field is required."
+msgstr "This field is required."
+
+#: env/site-packages/crispy_forms/tests/test_layout.py:348
+msgid "i18n text"
+msgstr ""
+
+#: env/site-packages/crispy_forms/tests/test_layout.py:350
+msgid "i18n legend"
+msgstr ""
+
+#: env/site-packages/crispy_forms/tests/test_layout_objects.py:131
+#: env/site-packages/django/core/validators.py:33
+msgid "Enter a valid value."
+msgstr ""
+
+#: env/site-packages/django/contrib/messages/apps.py:7
+msgid "Messages"
+msgstr ""
+
+#: env/site-packages/django/contrib/sessions/apps.py:7
+msgid "Sessions"
+msgstr ""
+
+#: env/site-packages/django/contrib/sessions/base_session.py:31
+msgid "session key"
+msgstr ""
+
+#: env/site-packages/django/contrib/sessions/base_session.py:32
+msgid "session data"
+msgstr ""
+
+#: env/site-packages/django/contrib/sessions/base_session.py:33
+msgid "expire date"
+msgstr ""
+
+#: env/site-packages/django/contrib/sessions/base_session.py:39
+msgid "session"
+msgstr ""
+
+#: env/site-packages/django/contrib/sessions/base_session.py:40
+msgid "sessions"
+msgstr ""
+
+#: env/site-packages/django/contrib/sitemaps/apps.py:7
+msgid "Site Maps"
+msgstr ""
+
+#: env/site-packages/django/contrib/sites/apps.py:10
+msgid "Sites"
+msgstr ""
+
+#: env/site-packages/django/contrib/sites/models.py:25
+msgid "The domain name cannot contain any spaces or tabs."
+msgstr ""
+
+#: env/site-packages/django/contrib/sites/models.py:89
+msgid "domain name"
+msgstr ""
+
+#: env/site-packages/django/contrib/sites/models.py:94
+msgid "display name"
+msgstr ""
+
+#: env/site-packages/django/contrib/sites/models.py:99
+msgid "site"
+msgstr ""
+
+#: env/site-packages/django/contrib/sites/models.py:100
+msgid "sites"
+msgstr ""
+
+#: env/site-packages/django/contrib/staticfiles/apps.py:7
+msgid "Static Files"
+msgstr ""
+
+#: env/site-packages/django/contrib/syndication/apps.py:7
+msgid "Syndication"
+msgstr ""
+
+#: env/site-packages/django/core/validators.py:106
+#: env/site-packages/django/forms/fields.py:663
+#: env/site-packages/rest_framework/fields.py:803
+msgid "Enter a valid URL."
+msgstr ""
+
+#: env/site-packages/django/core/validators.py:159
+msgid "Enter a valid integer."
+msgstr ""
+
+#: env/site-packages/django/core/validators.py:170
+#: env/site-packages/rest_framework/fields.py:769
+msgid "Enter a valid email address."
+msgstr ""
+
+#: env/site-packages/django/core/validators.py:243
+msgid ""
+"Enter a valid 'slug' consisting of letters, numbers, underscores or hyphens."
+msgstr ""
+
+#: env/site-packages/django/core/validators.py:250
+msgid ""
+"Enter a valid 'slug' consisting of Unicode letters, numbers, underscores, or "
+"hyphens."
+msgstr ""
+
+#: env/site-packages/django/core/validators.py:255
+#: env/site-packages/django/core/validators.py:274
+msgid "Enter a valid IPv4 address."
+msgstr ""
+
+#: env/site-packages/django/core/validators.py:260
+#: env/site-packages/django/core/validators.py:275
+msgid "Enter a valid IPv6 address."
+msgstr ""
+
+#: env/site-packages/django/core/validators.py:270
+#: env/site-packages/django/core/validators.py:273
+#: env/site-packages/rest_framework/fields.py:852
+msgid "Enter a valid IPv4 or IPv6 address."
+msgstr ""
+
+#: env/site-packages/django/core/validators.py:305
+#: env/site-packages/django/db/models/fields/__init__.py:1110
+msgid "Enter only digits separated by commas."
+msgstr ""
+
+#: env/site-packages/django/core/validators.py:311
+#, python-format
+msgid "Ensure this value is %(limit_value)s (it is %(show_value)s)."
+msgstr ""
+
+#: env/site-packages/django/core/validators.py:342
+#, python-format
+msgid "Ensure this value is less than or equal to %(limit_value)s."
+msgstr ""
+
+#: env/site-packages/django/core/validators.py:351
+#, python-format
+msgid "Ensure this value is greater than or equal to %(limit_value)s."
+msgstr ""
+
+#: env/site-packages/django/core/validators.py:361
+#, python-format
+msgid ""
+"Ensure this value has at least %(limit_value)d character (it has "
+"%(show_value)d)."
+msgid_plural ""
+"Ensure this value has at least %(limit_value)d characters (it has "
+"%(show_value)d)."
+msgstr[0] ""
+msgstr[1] ""
+
+#: env/site-packages/django/core/validators.py:376
+#, python-format
+msgid ""
+"Ensure this value has at most %(limit_value)d character (it has "
+"%(show_value)d)."
+msgid_plural ""
+"Ensure this value has at most %(limit_value)d characters (it has "
+"%(show_value)d)."
+msgstr[0] ""
+msgstr[1] ""
+
+#: env/site-packages/django/core/validators.py:396
+#, python-format
+msgid "Ensure that there are no more than %(max)s digit in total."
+msgid_plural "Ensure that there are no more than %(max)s digits in total."
+msgstr[0] ""
+msgstr[1] ""
+
+#: env/site-packages/django/core/validators.py:401
+#, python-format
+msgid "Ensure that there are no more than %(max)s decimal place."
+msgid_plural "Ensure that there are no more than %(max)s decimal places."
+msgstr[0] ""
+msgstr[1] ""
+
+#: env/site-packages/django/core/validators.py:406
+#, python-format
+msgid ""
+"Ensure that there are no more than %(max)s digit before the decimal point."
+msgid_plural ""
+"Ensure that there are no more than %(max)s digits before the decimal point."
+msgstr[0] ""
+msgstr[1] ""
+
+#: env/site-packages/django/db/models/base.py:1191
+#: env/site-packages/django/forms/models.py:734
+msgid "and"
+msgstr ""
+
+#: env/site-packages/django/db/models/base.py:1193
+#, python-format
+msgid "%(model_name)s with this %(field_labels)s already exists."
+msgstr ""
+
+#: env/site-packages/django/db/models/fields/__init__.py:110
+#, python-format
+msgid "Value %(value)r is not a valid choice."
+msgstr ""
+
+#: env/site-packages/django/db/models/fields/__init__.py:111
+msgid "This field cannot be null."
+msgstr ""
+
+#: env/site-packages/django/db/models/fields/__init__.py:112
+msgid "This field cannot be blank."
+msgstr ""
+
+#: env/site-packages/django/db/models/fields/__init__.py:113
+#, python-format
+msgid "%(model_name)s with this %(field_label)s already exists."
+msgstr ""
+
+#. Translators: The 'lookup_type' is one of 'date', 'year' or 'month'.
+#. Eg: "Title must be unique for pub_date year"
+#: env/site-packages/django/db/models/fields/__init__.py:117
+#, python-format
+msgid ""
+"%(field_label)s must be unique for %(date_field_label)s %(lookup_type)s."
+msgstr ""
+
+#: env/site-packages/django/db/models/fields/__init__.py:134
+#, python-format
+msgid "Field of type: %(field_type)s"
+msgstr ""
+
+#: env/site-packages/django/db/models/fields/__init__.py:881
+#: env/site-packages/django/db/models/fields/__init__.py:1788
+msgid "Integer"
+msgstr ""
+
+#: env/site-packages/django/db/models/fields/__init__.py:885
+#: env/site-packages/django/db/models/fields/__init__.py:1786
+#, python-format
+msgid "'%(value)s' value must be an integer."
+msgstr ""
+
+#: env/site-packages/django/db/models/fields/__init__.py:960
+#: env/site-packages/django/db/models/fields/__init__.py:1857
+msgid "Big (8 byte) integer"
+msgstr ""
+
+#: env/site-packages/django/db/models/fields/__init__.py:972
+#, python-format
+msgid "'%(value)s' value must be either True or False."
+msgstr ""
+
+#: env/site-packages/django/db/models/fields/__init__.py:974
+msgid "Boolean (Either True or False)"
+msgstr ""
+
+#: env/site-packages/django/db/models/fields/__init__.py:1040
+#, python-format
+msgid "String (up to %(max_length)s)"
+msgstr ""
+
+#: env/site-packages/django/db/models/fields/__init__.py:1094
+msgid "Comma-separated integers"
+msgstr ""
+
+#: env/site-packages/django/db/models/fields/__init__.py:1151
+#, python-format
+msgid ""
+"'%(value)s' value has an invalid date format. It must be in YYYY-MM-DD "
+"format."
+msgstr ""
+
+#: env/site-packages/django/db/models/fields/__init__.py:1153
+#: env/site-packages/django/db/models/fields/__init__.py:1298
+#, python-format
+msgid ""
+"'%(value)s' value has the correct format (YYYY-MM-DD) but it is an invalid "
+"date."
+msgstr ""
+
+#: env/site-packages/django/db/models/fields/__init__.py:1156
+msgid "Date (without time)"
+msgstr ""
+
+#: env/site-packages/django/db/models/fields/__init__.py:1296
+#, python-format
+msgid ""
+"'%(value)s' value has an invalid format. It must be in YYYY-MM-DD HH:MM[:ss[."
+"uuuuuu]][TZ] format."
+msgstr ""
+
+#: env/site-packages/django/db/models/fields/__init__.py:1300
+#, python-format
+msgid ""
+"'%(value)s' value has the correct format (YYYY-MM-DD HH:MM[:ss[.uuuuuu]]"
+"[TZ]) but it is an invalid date/time."
+msgstr ""
+
+#: env/site-packages/django/db/models/fields/__init__.py:1304
+msgid "Date (with time)"
+msgstr ""
+
+#: env/site-packages/django/db/models/fields/__init__.py:1454
+#, python-format
+msgid "'%(value)s' value must be a decimal number."
+msgstr ""
+
+#: env/site-packages/django/db/models/fields/__init__.py:1456
+msgid "Decimal number"
+msgstr ""
+
+#: env/site-packages/django/db/models/fields/__init__.py:1607
+#, python-format
+msgid ""
+"'%(value)s' value has an invalid format. It must be in [DD] [HH:[MM:]]ss[."
+"uuuuuu] format."
+msgstr ""
+
+#: env/site-packages/django/db/models/fields/__init__.py:1610
+msgid "Duration"
+msgstr ""
+
+#: env/site-packages/django/db/models/fields/__init__.py:1662
+msgid "Email address"
+msgstr ""
+
+#: env/site-packages/django/db/models/fields/__init__.py:1686
+msgid "File path"
+msgstr ""
+
+#: env/site-packages/django/db/models/fields/__init__.py:1752
+#, python-format
+msgid "'%(value)s' value must be a float."
+msgstr ""
+
+#: env/site-packages/django/db/models/fields/__init__.py:1754
+msgid "Floating point number"
+msgstr ""
+
+#: env/site-packages/django/db/models/fields/__init__.py:1872
+msgid "IPv4 address"
+msgstr ""
+
+#: env/site-packages/django/db/models/fields/__init__.py:1903
+msgid "IP address"
+msgstr ""
+
+#: env/site-packages/django/db/models/fields/__init__.py:1985
+#, python-format
+msgid "'%(value)s' value must be either None, True or False."
+msgstr ""
+
+#: env/site-packages/django/db/models/fields/__init__.py:1987
+msgid "Boolean (Either True, False or None)"
+msgstr ""
+
+#: env/site-packages/django/db/models/fields/__init__.py:2054
+msgid "Positive integer"
+msgstr ""
+
+#: env/site-packages/django/db/models/fields/__init__.py:2066
+msgid "Positive small integer"
+msgstr ""
+
+#: env/site-packages/django/db/models/fields/__init__.py:2079
+#, python-format
+msgid "Slug (up to %(max_length)s)"
+msgstr ""
+
+#: env/site-packages/django/db/models/fields/__init__.py:2113
+msgid "Small integer"
+msgstr ""
+
+#: env/site-packages/django/db/models/fields/__init__.py:2120
+msgid "Text"
+msgstr "Text"
+
+#: env/site-packages/django/db/models/fields/__init__.py:2146
+#, python-format
+msgid ""
+"'%(value)s' value has an invalid format. It must be in HH:MM[:ss[.uuuuuu]] "
+"format."
+msgstr ""
+
+#: env/site-packages/django/db/models/fields/__init__.py:2148
+#, python-format
+msgid ""
+"'%(value)s' value has the correct format (HH:MM[:ss[.uuuuuu]]) but it is an "
+"invalid time."
+msgstr ""
+
+#: env/site-packages/django/db/models/fields/__init__.py:2151
+msgid "Time"
+msgstr ""
+
+#: env/site-packages/django/db/models/fields/__init__.py:2279
+msgid "URL"
+msgstr ""
+
+#: env/site-packages/django/db/models/fields/__init__.py:2302
+msgid "Raw binary data"
+msgstr ""
+
+#: env/site-packages/django/db/models/fields/__init__.py:2349
+#, python-format
+msgid "'%(value)s' is not a valid UUID."
+msgstr ""
+
+#: env/site-packages/django/db/models/fields/files.py:225
+msgid "File"
+msgstr ""
+
+#: env/site-packages/django/db/models/fields/files.py:387
+msgid "Image"
+msgstr "Image"
+
+#: env/site-packages/django/db/models/fields/related.py:734
+#, python-format
+msgid "%(model)s instance with %(field)s %(value)r does not exist."
+msgstr ""
+
+#: env/site-packages/django/db/models/fields/related.py:736
+msgid "Foreign Key (type determined by related field)"
+msgstr ""
+
+#: env/site-packages/django/db/models/fields/related.py:974
+msgid "One-to-one relationship"
+msgstr ""
+
+#: env/site-packages/django/db/models/fields/related.py:1049
+#, python-format
+msgid "%(from)s-%(to)s relationship"
+msgstr ""
+
+#: env/site-packages/django/db/models/fields/related.py:1050
+#, python-format
+msgid "%(from)s-%(to)s relationships"
+msgstr ""
+
+#: env/site-packages/django/db/models/fields/related.py:1092
+msgid "Many-to-many relationship"
+msgstr ""
+
+#. Translators: If found as last label character, these punctuation
+#. characters will prevent the default label_suffix to be appended to the label
+#: env/site-packages/django/forms/boundfield.py:156
+msgid ":?.!"
+msgstr ""
+
+#: env/site-packages/django/forms/fields.py:250
+msgid "Enter a whole number."
+msgstr ""
+
+#: env/site-packages/django/forms/fields.py:295
+#: env/site-packages/django/forms/fields.py:332
+msgid "Enter a number."
+msgstr ""
+
+#: env/site-packages/django/forms/fields.py:410
+#: env/site-packages/django/forms/fields.py:1136
+msgid "Enter a valid date."
+msgstr ""
+
+#: env/site-packages/django/forms/fields.py:434
+#: env/site-packages/django/forms/fields.py:1137
+msgid "Enter a valid time."
+msgstr ""
+
+#: env/site-packages/django/forms/fields.py:456
+msgid "Enter a valid date/time."
+msgstr ""
+
+#: env/site-packages/django/forms/fields.py:485
+msgid "Enter a valid duration."
+msgstr ""
+
+#: env/site-packages/django/forms/fields.py:542
+msgid "No file was submitted. Check the encoding type on the form."
+msgstr ""
+
+#: env/site-packages/django/forms/fields.py:543
+#: env/site-packages/rest_framework/fields.py:1419
+msgid "No file was submitted."
+msgstr ""
+
+#: env/site-packages/django/forms/fields.py:544
+#: env/site-packages/rest_framework/fields.py:1422
+msgid "The submitted file is empty."
+msgstr ""
+
+#: env/site-packages/django/forms/fields.py:546
+#, python-format
+msgid "Ensure this filename has at most %(max)d character (it has %(length)d)."
+msgid_plural ""
+"Ensure this filename has at most %(max)d characters (it has %(length)d)."
+msgstr[0] ""
+msgstr[1] ""
+
+#: env/site-packages/django/forms/fields.py:549
+msgid "Please either submit a file or check the clear checkbox, not both."
+msgstr ""
+
+#: env/site-packages/django/forms/fields.py:611
+#: env/site-packages/rest_framework/fields.py:1471
+msgid ""
+"Upload a valid image. The file you uploaded was either not an image or a "
+"corrupted image."
+msgstr ""
+
+#: env/site-packages/django/forms/fields.py:767
+#: env/site-packages/django/forms/fields.py:863
+#: env/site-packages/django/forms/models.py:1240
+#, python-format
+msgid "Select a valid choice. %(value)s is not one of the available choices."
+msgstr ""
+
+#: env/site-packages/django/forms/fields.py:864
+#: env/site-packages/django/forms/fields.py:979
+#: env/site-packages/django/forms/models.py:1239
+msgid "Enter a list of values."
+msgstr ""
+
+#: env/site-packages/django/forms/fields.py:980
+msgid "Enter a complete value."
+msgstr ""
+
+#: env/site-packages/django/forms/fields.py:1195
+msgid "Enter a valid UUID."
+msgstr ""
+
+#. Translators: This is the default suffix added to form field labels
+#: env/site-packages/django/forms/forms.py:84
+msgid ":"
+msgstr ""
+
+#: env/site-packages/django/forms/forms.py:199
+#, python-format
+msgid "(Hidden field %(name)s) %(error)s"
+msgstr ""
+
+#: env/site-packages/django/forms/formsets.py:97
+msgid "ManagementForm data is missing or has been tampered with"
+msgstr ""
+
+#: env/site-packages/django/forms/formsets.py:350
+#, python-format
+msgid "Please submit %d or fewer forms."
+msgid_plural "Please submit %d or fewer forms."
+msgstr[0] ""
+msgstr[1] ""
+
+#: env/site-packages/django/forms/formsets.py:357
+#, python-format
+msgid "Please submit %d or more forms."
+msgid_plural "Please submit %d or more forms."
+msgstr[0] ""
+msgstr[1] ""
+
+#: env/site-packages/django/forms/formsets.py:385
+#: env/site-packages/django/forms/formsets.py:387
+msgid "Order"
+msgstr ""
+
+#: env/site-packages/django/forms/formsets.py:389
+msgid "Delete"
+msgstr ""
+
+#: env/site-packages/django/forms/models.py:729
+#, python-format
+msgid "Please correct the duplicate data for %(field)s."
+msgstr ""
+
+#: env/site-packages/django/forms/models.py:733
+#, python-format
+msgid "Please correct the duplicate data for %(field)s, which must be unique."
+msgstr ""
+
+#: env/site-packages/django/forms/models.py:739
+#, python-format
+msgid ""
+"Please correct the duplicate data for %(field_name)s which must be unique "
+"for the %(lookup)s in %(date_field)s."
+msgstr ""
+
+#: env/site-packages/django/forms/models.py:748
+msgid "Please correct the duplicate values below."
+msgstr ""
+
+#: env/site-packages/django/forms/models.py:1072
+msgid "The inline foreign key did not match the parent instance primary key."
+msgstr ""
+
+#: env/site-packages/django/forms/models.py:1133
+msgid "Select a valid choice. That choice is not one of the available choices."
+msgstr ""
+
+#: env/site-packages/django/forms/models.py:1242
+#, python-format
+msgid "\"%(pk)s\" is not a valid value for a primary key."
+msgstr ""
+
+#: env/site-packages/django/forms/utils.py:172
+#, python-format
+msgid ""
+"%(datetime)s couldn't be interpreted in time zone %(current_timezone)s; it "
+"may be ambiguous or it may not exist."
+msgstr ""
+
+#: env/site-packages/django/forms/widgets.py:364
+msgid "Currently"
+msgstr ""
+
+#: env/site-packages/django/forms/widgets.py:365
+msgid "Change"
+msgstr ""
+
+#: env/site-packages/django/forms/widgets.py:366
+msgid "Clear"
+msgstr ""
+
+#: env/site-packages/django/forms/widgets.py:590
+msgid "Unknown"
+msgstr ""
+
+#: env/site-packages/django/forms/widgets.py:591
+msgid "Yes"
+msgstr ""
+
+#: env/site-packages/django/forms/widgets.py:592
+msgid "No"
+msgstr ""
+
+#: env/site-packages/django/template/defaultfilters.py:848
+msgid "yes,no,maybe"
+msgstr ""
+
+#: env/site-packages/django/template/defaultfilters.py:877
+#: env/site-packages/django/template/defaultfilters.py:894
+#, python-format
+msgid "%(size)d byte"
+msgid_plural "%(size)d bytes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: env/site-packages/django/template/defaultfilters.py:896
+#, python-format
+msgid "%s KB"
+msgstr ""
+
+#: env/site-packages/django/template/defaultfilters.py:898
+#, python-format
+msgid "%s MB"
+msgstr ""
+
+#: env/site-packages/django/template/defaultfilters.py:900
+#, python-format
+msgid "%s GB"
+msgstr ""
+
+#: env/site-packages/django/template/defaultfilters.py:902
+#, python-format
+msgid "%s TB"
+msgstr ""
+
+#: env/site-packages/django/template/defaultfilters.py:904
+#, python-format
+msgid "%s PB"
+msgstr ""
+
+#: env/site-packages/django/utils/dateformat.py:66
+msgid "p.m."
+msgstr ""
+
+#: env/site-packages/django/utils/dateformat.py:67
+msgid "a.m."
+msgstr ""
+
+#: env/site-packages/django/utils/dateformat.py:72
+msgid "PM"
+msgstr ""
+
+#: env/site-packages/django/utils/dateformat.py:73
+msgid "AM"
+msgstr ""
+
+#: env/site-packages/django/utils/dateformat.py:158
+msgid "midnight"
+msgstr ""
+
+#: env/site-packages/django/utils/dateformat.py:160
+msgid "noon"
+msgstr ""
+
+#: env/site-packages/django/utils/dates.py:6
+msgid "Monday"
+msgstr ""
+
+#: env/site-packages/django/utils/dates.py:6
+msgid "Tuesday"
+msgstr ""
+
+#: env/site-packages/django/utils/dates.py:6
+msgid "Wednesday"
+msgstr ""
+
+#: env/site-packages/django/utils/dates.py:6
+msgid "Thursday"
+msgstr ""
+
+#: env/site-packages/django/utils/dates.py:6
+msgid "Friday"
+msgstr ""
+
+#: env/site-packages/django/utils/dates.py:7
+msgid "Saturday"
+msgstr ""
+
+#: env/site-packages/django/utils/dates.py:7
+msgid "Sunday"
+msgstr ""
+
+#: env/site-packages/django/utils/dates.py:10
+msgid "Mon"
+msgstr ""
+
+#: env/site-packages/django/utils/dates.py:10
+msgid "Tue"
+msgstr ""
+
+#: env/site-packages/django/utils/dates.py:10
+msgid "Wed"
+msgstr ""
+
+#: env/site-packages/django/utils/dates.py:10
+msgid "Thu"
+msgstr ""
+
+#: env/site-packages/django/utils/dates.py:10
+msgid "Fri"
+msgstr ""
+
+#: env/site-packages/django/utils/dates.py:11
+msgid "Sat"
+msgstr ""
+
+#: env/site-packages/django/utils/dates.py:11
+msgid "Sun"
+msgstr ""
+
+#: env/site-packages/django/utils/dates.py:18
+msgid "January"
+msgstr ""
+
+#: env/site-packages/django/utils/dates.py:18
+msgid "February"
+msgstr ""
+
+#: env/site-packages/django/utils/dates.py:18
+msgid "March"
+msgstr ""
+
+#: env/site-packages/django/utils/dates.py:18
+msgid "April"
+msgstr ""
+
+#: env/site-packages/django/utils/dates.py:18
+msgid "May"
+msgstr ""
+
+#: env/site-packages/django/utils/dates.py:18
+msgid "June"
+msgstr ""
+
+#: env/site-packages/django/utils/dates.py:19
+msgid "July"
+msgstr ""
+
+#: env/site-packages/django/utils/dates.py:19
+msgid "August"
+msgstr ""
+
+#: env/site-packages/django/utils/dates.py:19
+msgid "September"
+msgstr ""
+
+#: env/site-packages/django/utils/dates.py:19
+msgid "October"
+msgstr ""
+
+#: env/site-packages/django/utils/dates.py:19
+msgid "November"
+msgstr ""
+
+#: env/site-packages/django/utils/dates.py:20
+msgid "December"
+msgstr ""
+
+#: env/site-packages/django/utils/dates.py:23
+msgid "jan"
+msgstr ""
+
+#: env/site-packages/django/utils/dates.py:23
+msgid "feb"
+msgstr ""
+
+#: env/site-packages/django/utils/dates.py:23
+msgid "mar"
+msgstr ""
+
+#: env/site-packages/django/utils/dates.py:23
+msgid "apr"
+msgstr ""
+
+#: env/site-packages/django/utils/dates.py:23
+msgid "may"
+msgstr ""
+
+#: env/site-packages/django/utils/dates.py:23
+msgid "jun"
+msgstr ""
+
+#: env/site-packages/django/utils/dates.py:24
+msgid "jul"
+msgstr ""
+
+#: env/site-packages/django/utils/dates.py:24
+msgid "aug"
+msgstr ""
+
+#: env/site-packages/django/utils/dates.py:24
+msgid "sep"
+msgstr ""
+
+#: env/site-packages/django/utils/dates.py:24
+msgid "oct"
+msgstr ""
+
+#: env/site-packages/django/utils/dates.py:24
+msgid "nov"
+msgstr ""
+
+#: env/site-packages/django/utils/dates.py:24
+msgid "dec"
+msgstr ""
+
+#: env/site-packages/django/utils/dates.py:31
+msgctxt "abbrev. month"
+msgid "Jan."
+msgstr ""
+
+#: env/site-packages/django/utils/dates.py:32
+msgctxt "abbrev. month"
+msgid "Feb."
+msgstr ""
+
+#: env/site-packages/django/utils/dates.py:33
+msgctxt "abbrev. month"
+msgid "March"
+msgstr ""
+
+#: env/site-packages/django/utils/dates.py:34
+msgctxt "abbrev. month"
+msgid "April"
+msgstr ""
+
+#: env/site-packages/django/utils/dates.py:35
+msgctxt "abbrev. month"
+msgid "May"
+msgstr ""
+
+#: env/site-packages/django/utils/dates.py:36
+msgctxt "abbrev. month"
+msgid "June"
+msgstr ""
+
+#: env/site-packages/django/utils/dates.py:37
+msgctxt "abbrev. month"
+msgid "July"
+msgstr ""
+
+#: env/site-packages/django/utils/dates.py:38
+msgctxt "abbrev. month"
+msgid "Aug."
+msgstr ""
+
+#: env/site-packages/django/utils/dates.py:39
+msgctxt "abbrev. month"
+msgid "Sept."
+msgstr ""
+
+#: env/site-packages/django/utils/dates.py:40
+msgctxt "abbrev. month"
+msgid "Oct."
+msgstr ""
+
+#: env/site-packages/django/utils/dates.py:41
+msgctxt "abbrev. month"
+msgid "Nov."
+msgstr ""
+
+#: env/site-packages/django/utils/dates.py:42
+msgctxt "abbrev. month"
+msgid "Dec."
+msgstr ""
+
+#: env/site-packages/django/utils/dates.py:45
+msgctxt "alt. month"
+msgid "January"
+msgstr ""
+
+#: env/site-packages/django/utils/dates.py:46
+msgctxt "alt. month"
+msgid "February"
+msgstr ""
+
+#: env/site-packages/django/utils/dates.py:47
+msgctxt "alt. month"
+msgid "March"
+msgstr ""
+
+#: env/site-packages/django/utils/dates.py:48
+msgctxt "alt. month"
+msgid "April"
+msgstr ""
+
+#: env/site-packages/django/utils/dates.py:49
+msgctxt "alt. month"
+msgid "May"
+msgstr ""
+
+#: env/site-packages/django/utils/dates.py:50
+msgctxt "alt. month"
+msgid "June"
+msgstr ""
+
+#: env/site-packages/django/utils/dates.py:51
+msgctxt "alt. month"
+msgid "July"
+msgstr ""
+
+#: env/site-packages/django/utils/dates.py:52
+msgctxt "alt. month"
+msgid "August"
+msgstr ""
+
+#: env/site-packages/django/utils/dates.py:53
+msgctxt "alt. month"
+msgid "September"
+msgstr ""
+
+#: env/site-packages/django/utils/dates.py:54
+msgctxt "alt. month"
+msgid "October"
+msgstr ""
+
+#: env/site-packages/django/utils/dates.py:55
+msgctxt "alt. month"
+msgid "November"
+msgstr ""
+
+#: env/site-packages/django/utils/dates.py:56
+msgctxt "alt. month"
+msgid "December"
+msgstr ""
+
+#: env/site-packages/django/utils/ipv6.py:12
+msgid "This is not a valid IPv6 address."
+msgstr ""
+
+#: env/site-packages/django/utils/text.py:78
+#, python-format
+msgctxt "String to return when truncating text"
+msgid "%(truncated_text)s..."
+msgstr ""
+
+#: env/site-packages/django/utils/text.py:248
+msgid "or"
+msgstr ""
+
+#. Translators: This string is used as a separator between list elements
+#: env/site-packages/django/utils/text.py:267
+#: env/site-packages/django/utils/timesince.py:71
+msgid ", "
+msgstr ""
+
+#: env/site-packages/django/utils/timesince.py:11
+#, python-format
+msgid "%d year"
+msgid_plural "%d years"
+msgstr[0] ""
+msgstr[1] ""
+
+#: env/site-packages/django/utils/timesince.py:12
+#, python-format
+msgid "%d month"
+msgid_plural "%d months"
+msgstr[0] ""
+msgstr[1] ""
+
+#: env/site-packages/django/utils/timesince.py:13
+#, python-format
+msgid "%d week"
+msgid_plural "%d weeks"
+msgstr[0] ""
+msgstr[1] ""
+
+#: env/site-packages/django/utils/timesince.py:14
+#, python-format
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] ""
+msgstr[1] ""
+
+#: env/site-packages/django/utils/timesince.py:15
+#, python-format
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] ""
+msgstr[1] ""
+
+#: env/site-packages/django/utils/timesince.py:16
+#, python-format
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: env/site-packages/django/utils/timesince.py:60
+msgid "0 minutes"
+msgstr ""
+
+#: env/site-packages/django/views/csrf.py:109
+msgid "Forbidden"
+msgstr ""
+
+#: env/site-packages/django/views/csrf.py:110
+msgid "CSRF verification failed. Request aborted."
+msgstr ""
+
+#: env/site-packages/django/views/csrf.py:114
+msgid ""
+"You are seeing this message because this HTTPS site requires a 'Referer "
+"header' to be sent by your Web browser, but none was sent. This header is "
+"required for security reasons, to ensure that your browser is not being "
+"hijacked by third parties."
+msgstr ""
+
+#: env/site-packages/django/views/csrf.py:119
+msgid ""
+"If you have configured your browser to disable 'Referer' headers, please re-"
+"enable them, at least for this site, or for HTTPS connections, or for 'same-"
+"origin' requests."
+msgstr ""
+
+#: env/site-packages/django/views/csrf.py:124
+msgid ""
+"You are seeing this message because this site requires a CSRF cookie when "
+"submitting forms. This cookie is required for security reasons, to ensure "
+"that your browser is not being hijacked by third parties."
+msgstr ""
+
+#: env/site-packages/django/views/csrf.py:129
+msgid ""
+"If you have configured your browser to disable cookies, please re-enable "
+"them, at least for this site, or for 'same-origin' requests."
+msgstr ""
+
+#: env/site-packages/django/views/csrf.py:134
+msgid "More information is available with DEBUG=True."
+msgstr ""
+
+#: env/site-packages/django/views/debug.py:521
+msgid "Welcome to Django"
+msgstr ""
+
+#: env/site-packages/django/views/debug.py:522
+msgid "It worked!"
+msgstr ""
+
+#: env/site-packages/django/views/debug.py:523
+msgid "Congratulations on your first Django-powered page."
+msgstr ""
+
+#: env/site-packages/django/views/debug.py:525
+msgid ""
+"Of course, you haven't actually done any work yet. Next, start your first "
+"app by running <code>python manage.py startapp [app_label]</code>."
+msgstr ""
+
+#: env/site-packages/django/views/debug.py:529
+msgid ""
+"You're seeing this message because you have <code>DEBUG = True</code> in "
+"your Django settings file and you haven't configured any URLs. Get to work!"
+msgstr ""
+
+#: env/site-packages/django/views/generic/dates.py:48
+msgid "No year specified"
+msgstr ""
+
+#: env/site-packages/django/views/generic/dates.py:104
+msgid "No month specified"
+msgstr ""
+
+#: env/site-packages/django/views/generic/dates.py:163
+msgid "No day specified"
+msgstr ""
+
+#: env/site-packages/django/views/generic/dates.py:219
+msgid "No week specified"
+msgstr ""
+
+#: env/site-packages/django/views/generic/dates.py:378
+#: env/site-packages/django/views/generic/dates.py:406
+#, python-format
+msgid "No %(verbose_name_plural)s available"
+msgstr ""
+
+#: env/site-packages/django/views/generic/dates.py:660
+#, python-format
+msgid ""
+"Future %(verbose_name_plural)s not available because %(class_name)s."
+"allow_future is False."
+msgstr ""
+
+#: env/site-packages/django/views/generic/dates.py:694
+#, python-format
+msgid "Invalid date string '%(datestr)s' given format '%(format)s'"
+msgstr ""
+
+#: env/site-packages/django/views/generic/detail.py:55
+#, python-format
+msgid "No %(verbose_name)s found matching the query"
+msgstr ""
+
+#: env/site-packages/django/views/generic/list.py:76
+msgid "Page is not 'last', nor can it be converted to an int."
+msgstr ""
+
+#: env/site-packages/django/views/generic/list.py:81
+#, python-format
+msgid "Invalid page (%(page_number)s): %(message)s"
+msgstr ""
+
+#: env/site-packages/django/views/generic/list.py:171
+#, python-format
+msgid "Empty list and '%(class_name)s.allow_empty' is False."
+msgstr ""
+
+#: env/site-packages/django/views/static.py:58
+msgid "Directory indexes are not allowed here."
+msgstr ""
+
+#: env/site-packages/django/views/static.py:60
+#, python-format
+msgid "\"%(path)s\" does not exist"
+msgstr ""
+
+#: env/site-packages/django/views/static.py:100
+#, python-format
+msgid "Index of %(directory)s"
+msgstr ""
+
+#: env/site-packages/rest_framework/authentication.py:73
+msgid "Invalid basic header. No credentials provided."
+msgstr ""
+
+#: env/site-packages/rest_framework/authentication.py:76
+msgid "Invalid basic header. Credentials string should not contain spaces."
+msgstr ""
+
+#: env/site-packages/rest_framework/authentication.py:82
+msgid "Invalid basic header. Credentials not correctly base64 encoded."
+msgstr ""
+
+#: env/site-packages/rest_framework/authentication.py:99
+msgid "Invalid username/password."
+msgstr ""
+
+#: env/site-packages/rest_framework/authentication.py:102
+#: env/site-packages/rest_framework/authentication.py:198
+msgid "User inactive or deleted."
+msgstr ""
+
+#: env/site-packages/rest_framework/authentication.py:176
+msgid "Invalid token header. No credentials provided."
+msgstr ""
+
+#: env/site-packages/rest_framework/authentication.py:179
+msgid "Invalid token header. Token string should not contain spaces."
+msgstr ""
+
+#: env/site-packages/rest_framework/authentication.py:185
+msgid ""
+"Invalid token header. Token string should not contain invalid characters."
+msgstr ""
+
+#: env/site-packages/rest_framework/authentication.py:195
+msgid "Invalid token."
+msgstr ""
+
+#: env/site-packages/rest_framework/authtoken/apps.py:7
+msgid "Auth Token"
+msgstr ""
+
+#: env/site-packages/rest_framework/authtoken/models.py:15
+msgid "Key"
+msgstr ""
+
+#: env/site-packages/rest_framework/authtoken/models.py:18
+msgid "User"
+msgstr ""
+
+#: env/site-packages/rest_framework/authtoken/models.py:20
+msgid "Created"
+msgstr ""
+
+#: env/site-packages/rest_framework/authtoken/models.py:29
+msgid "Token"
+msgstr ""
+
+#: env/site-packages/rest_framework/authtoken/models.py:30
+msgid "Tokens"
+msgstr ""
+
+#: env/site-packages/rest_framework/authtoken/serializers.py:8
+#: users/forms.py:85
+msgid "Username"
+msgstr "Username"
+
+#: env/site-packages/rest_framework/authtoken/serializers.py:9
+msgid "Password"
+msgstr "Password"
+
+#: env/site-packages/rest_framework/authtoken/serializers.py:23
+msgid "User account is disabled."
+msgstr "User account is disabled."
+
+#: env/site-packages/rest_framework/authtoken/serializers.py:26
+msgid "Unable to log in with provided credentials."
+msgstr "Unable to log in with provided credentials."
+
+#: env/site-packages/rest_framework/authtoken/serializers.py:29
+msgid "Must include \"username\" and \"password\"."
+msgstr ""
+
+#: env/site-packages/rest_framework/exceptions.py:83
+msgid "A server error occurred."
+msgstr ""
+
+#: env/site-packages/rest_framework/exceptions.py:123
+msgid "Invalid input."
+msgstr ""
+
+#: env/site-packages/rest_framework/exceptions.py:145
+msgid "Malformed request."
+msgstr ""
+
+#: env/site-packages/rest_framework/exceptions.py:151
+msgid "Incorrect authentication credentials."
+msgstr ""
+
+#: env/site-packages/rest_framework/exceptions.py:157
+msgid "Authentication credentials were not provided."
+msgstr ""
+
+#: env/site-packages/rest_framework/exceptions.py:163
+msgid "You do not have permission to perform this action."
+msgstr ""
+
+#: env/site-packages/rest_framework/exceptions.py:169
+#: env/site-packages/rest_framework/views.py:82
+msgid "Not found."
+msgstr ""
+
+#: env/site-packages/rest_framework/exceptions.py:175
+#, python-brace-format
+msgid "Method \"{method}\" not allowed."
+msgstr ""
+
+#: env/site-packages/rest_framework/exceptions.py:186
+msgid "Could not satisfy the request Accept header."
+msgstr ""
+
+#: env/site-packages/rest_framework/exceptions.py:196
+#, python-brace-format
+msgid "Unsupported media type \"{media_type}\" in request."
+msgstr ""
+
+#: env/site-packages/rest_framework/exceptions.py:207
+msgid "Request was throttled."
+msgstr ""
+
+#: env/site-packages/rest_framework/fields.py:304
+msgid "This field may not be null."
+msgstr ""
+
+#: env/site-packages/rest_framework/fields.py:646
+#: env/site-packages/rest_framework/fields.py:689
+#, python-brace-format
+msgid "\"{input}\" is not a valid boolean."
+msgstr ""
+
+#: env/site-packages/rest_framework/fields.py:724
+msgid "Not a valid string."
+msgstr ""
+
+#: env/site-packages/rest_framework/fields.py:725
+msgid "This field may not be blank."
+msgstr ""
+
+#: env/site-packages/rest_framework/fields.py:726
+#: env/site-packages/rest_framework/fields.py:1758
+#, python-brace-format
+msgid "Ensure this field has no more than {max_length} characters."
+msgstr ""
+
+#: env/site-packages/rest_framework/fields.py:727
+#, python-brace-format
+msgid "Ensure this field has at least {min_length} characters."
+msgstr ""
+
+#: env/site-packages/rest_framework/fields.py:780
+msgid "This value does not match the required pattern."
+msgstr ""
+
+#: env/site-packages/rest_framework/fields.py:791
+msgid ""
+"Enter a valid \"slug\" consisting of letters, numbers, underscores or "
+"hyphens."
+msgstr ""
+
+#: env/site-packages/rest_framework/fields.py:816
+#, python-brace-format
+msgid "\"{value}\" is not a valid UUID."
+msgstr ""
+
+#: env/site-packages/rest_framework/fields.py:880
+msgid "A valid integer is required."
+msgstr ""
+
+#: env/site-packages/rest_framework/fields.py:881
+#: env/site-packages/rest_framework/fields.py:916
+#: env/site-packages/rest_framework/fields.py:950
+#, python-brace-format
+msgid "Ensure this value is less than or equal to {max_value}."
+msgstr ""
+
+#: env/site-packages/rest_framework/fields.py:882
+#: env/site-packages/rest_framework/fields.py:917
+#: env/site-packages/rest_framework/fields.py:951
+#, python-brace-format
+msgid "Ensure this value is greater than or equal to {min_value}."
+msgstr ""
+
+#: env/site-packages/rest_framework/fields.py:883
+#: env/site-packages/rest_framework/fields.py:918
+#: env/site-packages/rest_framework/fields.py:955
+msgid "String value too large."
+msgstr ""
+
+#: env/site-packages/rest_framework/fields.py:915
+#: env/site-packages/rest_framework/fields.py:949
+msgid "A valid number is required."
+msgstr ""
+
+#: env/site-packages/rest_framework/fields.py:952
+#, python-brace-format
+msgid "Ensure that there are no more than {max_digits} digits in total."
+msgstr ""
+
+#: env/site-packages/rest_framework/fields.py:953
+#, python-brace-format
+msgid "Ensure that there are no more than {max_decimal_places} decimal places."
+msgstr ""
+
+#: env/site-packages/rest_framework/fields.py:954
+#, python-brace-format
+msgid ""
+"Ensure that there are no more than {max_whole_digits} digits before the "
+"decimal point."
+msgstr ""
+
+#: env/site-packages/rest_framework/fields.py:1086
+#, python-brace-format
+msgid "Datetime has wrong format. Use one of these formats instead: {format}."
+msgstr ""
+
+#: env/site-packages/rest_framework/fields.py:1087
+msgid "Expected a datetime but got a date."
+msgstr ""
+
+#: env/site-packages/rest_framework/fields.py:1164
+#, python-brace-format
+msgid "Date has wrong format. Use one of these formats instead: {format}."
+msgstr ""
+
+#: env/site-packages/rest_framework/fields.py:1165
+msgid "Expected a date but got a datetime."
+msgstr ""
+
+#: env/site-packages/rest_framework/fields.py:1231
+#, python-brace-format
+msgid "Time has wrong format. Use one of these formats instead: {format}."
+msgstr ""
+
+#: env/site-packages/rest_framework/fields.py:1293
+#, python-brace-format
+msgid "Duration has wrong format. Use one of these formats instead: {format}."
+msgstr ""
+
+#: env/site-packages/rest_framework/fields.py:1312
+#: env/site-packages/rest_framework/fields.py:1361
+#, python-brace-format
+msgid "\"{input}\" is not a valid choice."
+msgstr ""
+
+#: env/site-packages/rest_framework/fields.py:1315
+#, python-brace-format
+msgid "More than {count} items..."
+msgstr ""
+
+#: env/site-packages/rest_framework/fields.py:1362
+#: env/site-packages/rest_framework/fields.py:1509
+#: env/site-packages/rest_framework/relations.py:456
+#: env/site-packages/rest_framework/serializers.py:553
+#, python-brace-format
+msgid "Expected a list of items but got type \"{input_type}\"."
+msgstr ""
+
+#: env/site-packages/rest_framework/fields.py:1363
+msgid "This selection may not be empty."
+msgstr ""
+
+#: env/site-packages/rest_framework/fields.py:1400
+#, python-brace-format
+msgid "\"{input}\" is not a valid path choice."
+msgstr ""
+
+#: env/site-packages/rest_framework/fields.py:1420
+msgid "The submitted data was not a file. Check the encoding type on the form."
+msgstr ""
+
+#: env/site-packages/rest_framework/fields.py:1421
+msgid "No filename could be determined."
+msgstr ""
+
+#: env/site-packages/rest_framework/fields.py:1423
+#, python-brace-format
+msgid ""
+"Ensure this filename has at most {max_length} characters (it has {length})."
+msgstr ""
+
+#: env/site-packages/rest_framework/fields.py:1510
+#: env/site-packages/rest_framework/relations.py:457
+#: env/site-packages/rest_framework/serializers.py:554
+msgid "This list may not be empty."
+msgstr ""
+
+#: env/site-packages/rest_framework/fields.py:1511
+#, python-brace-format
+msgid "Ensure this field has at least {min_length} elements."
+msgstr ""
+
+#: env/site-packages/rest_framework/fields.py:1512
+#, python-brace-format
+msgid "Ensure this field has no more than {max_length} elements."
+msgstr ""
+
+#: env/site-packages/rest_framework/fields.py:1573
+#, python-brace-format
+msgid "Expected a dictionary of items but got type \"{input_type}\"."
+msgstr ""
+
+#: env/site-packages/rest_framework/fields.py:1620
+msgid "Value must be valid JSON."
+msgstr ""
+
+#: env/site-packages/rest_framework/filters.py:87
+#: env/site-packages/rest_framework/templates/rest_framework/filters/search.html:2
+msgid "Search"
+msgstr ""
+
+#: env/site-packages/rest_framework/filters.py:88
+msgid "A search term."
+msgstr ""
+
+#: env/site-packages/rest_framework/filters.py:187
+#: env/site-packages/rest_framework/templates/rest_framework/filters/ordering.html:3
+msgid "Ordering"
+msgstr ""
+
+#: env/site-packages/rest_framework/filters.py:188
+msgid "Which field to use when ordering the results."
+msgstr ""
+
+#: env/site-packages/rest_framework/filters.py:288
+msgid "ascending"
+msgstr ""
+
+#: env/site-packages/rest_framework/filters.py:289
+msgid "descending"
+msgstr ""
+
+#: env/site-packages/rest_framework/pagination.py:182
+msgid "A page number within the paginated result set."
+msgstr ""
+
+#: env/site-packages/rest_framework/pagination.py:187
+#: env/site-packages/rest_framework/pagination.py:328
+msgid "Number of results to return per page."
+msgstr ""
+
+#: env/site-packages/rest_framework/pagination.py:197
+msgid "Invalid page."
+msgstr ""
+
+#: env/site-packages/rest_framework/pagination.py:330
+msgid "The initial index from which to return the results."
+msgstr ""
+
+#: env/site-packages/rest_framework/pagination.py:479
+msgid "The pagination cursor value."
+msgstr ""
+
+#: env/site-packages/rest_framework/pagination.py:481
+msgid "Invalid cursor"
+msgstr ""
+
+#: env/site-packages/rest_framework/relations.py:230
+#, python-brace-format
+msgid "Invalid pk \"{pk_value}\" - object does not exist."
+msgstr ""
+
+#: env/site-packages/rest_framework/relations.py:231
+#, python-brace-format
+msgid "Incorrect type. Expected pk value, received {data_type}."
+msgstr ""
+
+#: env/site-packages/rest_framework/relations.py:263
+msgid "Invalid hyperlink - No URL match."
+msgstr ""
+
+#: env/site-packages/rest_framework/relations.py:264
+msgid "Invalid hyperlink - Incorrect URL match."
+msgstr ""
+
+#: env/site-packages/rest_framework/relations.py:265
+msgid "Invalid hyperlink - Object does not exist."
+msgstr ""
+
+#: env/site-packages/rest_framework/relations.py:266
+#, python-brace-format
+msgid "Incorrect type. Expected URL string, received {data_type}."
+msgstr ""
+
+#: env/site-packages/rest_framework/relations.py:420
+#, python-brace-format
+msgid "Object with {slug_name}={value} does not exist."
+msgstr ""
+
+#: env/site-packages/rest_framework/relations.py:421
+msgid "Invalid value."
+msgstr ""
+
+#: env/site-packages/rest_framework/schemas.py:163
+msgid "unique integer value"
+msgstr ""
+
+#: env/site-packages/rest_framework/schemas.py:165
+msgid "UUID string"
+msgstr ""
+
+#: env/site-packages/rest_framework/schemas.py:167
+msgid "unique value"
+msgstr ""
+
+#: env/site-packages/rest_framework/schemas.py:169
+#, python-brace-format
+msgid "A {value_type} identifying this {name}."
+msgstr ""
+
+#: env/site-packages/rest_framework/serializers.py:350
+#, python-brace-format
+msgid "Invalid data. Expected a dictionary, but got {datatype}."
+msgstr ""
+
+#: env/site-packages/rest_framework/templates/rest_framework/admin.html:116
+#: env/site-packages/rest_framework/templates/rest_framework/base.html:128
+msgid "Filters"
+msgstr ""
+
+#: env/site-packages/rest_framework/templates/rest_framework/filters/django_filter.html:2
+#: env/site-packages/rest_framework/templates/rest_framework/filters/django_filter_crispyforms.html:4
+msgid "Field filters"
+msgstr ""
+
+#: env/site-packages/rest_framework/templates/rest_framework/filters/django_filter.html:5
+msgid "Submit"
+msgstr ""
+
+#: env/site-packages/rest_framework/templates/rest_framework/horizontal/radio.html:4
+#: env/site-packages/rest_framework/templates/rest_framework/inline/radio.html:3
+#: env/site-packages/rest_framework/templates/rest_framework/vertical/radio.html:3
+msgid "None"
+msgstr ""
+
+#: env/site-packages/rest_framework/templates/rest_framework/horizontal/select_multiple.html:4
+#: env/site-packages/rest_framework/templates/rest_framework/inline/select_multiple.html:3
+#: env/site-packages/rest_framework/templates/rest_framework/vertical/select_multiple.html:3
+msgid "No items to select."
+msgstr ""
+
+#: env/site-packages/rest_framework/validators.py:43
+msgid "This field must be unique."
+msgstr ""
+
+#: env/site-packages/rest_framework/validators.py:98
+#, python-brace-format
+msgid "The fields {field_names} must make a unique set."
+msgstr ""
+
+#: env/site-packages/rest_framework/validators.py:249
+#, python-brace-format
+msgid "This field must be unique for the \"{date_field}\" date."
+msgstr ""
+
+#: env/site-packages/rest_framework/validators.py:264
+#, python-brace-format
+msgid "This field must be unique for the \"{date_field}\" month."
+msgstr ""
+
+#: env/site-packages/rest_framework/validators.py:277
+#, python-brace-format
+msgid "This field must be unique for the \"{date_field}\" year."
+msgstr ""
+
+#: env/site-packages/rest_framework/versioning.py:43
+msgid "Invalid version in \"Accept\" header."
+msgstr ""
+
+#: env/site-packages/rest_framework/versioning.py:74
+msgid "Invalid version in URL path."
+msgstr ""
+
+#: env/site-packages/rest_framework/versioning.py:116
+msgid "Invalid version in URL path. Does not match any version namespace."
+msgstr ""
+
+#: env/site-packages/rest_framework/versioning.py:148
+msgid "Invalid version in hostname."
+msgstr ""
+
+#: env/site-packages/rest_framework/versioning.py:170
+msgid "Invalid version in query parameter."
+msgstr ""
+
+#: env/site-packages/rest_framework/views.py:89
+msgid "Permission denied."
+msgstr ""
+
+#: users/forms.py:38
+msgid "¿No te acuerdas? Hazlo <a href=\"/reset_password\">aqu&iacute;</a>"
+msgstr "You don't remember? Do it <a href=\"/reset_password\">here</a>"
+
+#: users/forms.py:48 users/templates/users/login.html:5
+msgid "Iniciar sesión"
+msgstr "Sign in"
+
+#: users/forms.py:59
+msgid "Only alphanumeric characters are allowed."
+msgstr "Only alphanumeric characters are allowed."
+
+#: users/forms.py:61 users/forms.py:97
+msgid "Nombre de usuario"
+msgstr "Username"
+
+#: users/forms.py:62 users/forms.py:99
+msgid "Contraseña"
+msgstr "Password"
+
+#: users/forms.py:79
+msgid "Registrarse"
+msgstr "Sign up"
+
+#: users/forms.py:87
+msgid "Requerido. Menos de 30 caracteres. Letras y números"
+msgstr "Required. Less than 30 characters. Only letters and numbers."
+
+#: users/forms.py:89
+msgid "Este campo solo puede contener letras y números"
+msgstr "Only letters and numbers."
+
+#: users/forms.py:95 users/forms.py:149
+msgid "Nombre"
+msgstr "Name"
+
+#: users/forms.py:96 users/forms.py:150
+msgid "Apellido"
+msgstr "Last name"
+
+#: users/forms.py:98 users/forms.py:151
+msgid "Correo electrónico"
+msgstr "Email"
+
+#: users/forms.py:190 users/templates/users/update.html:6
+msgid "Actualizar"
+msgstr "Update"
+
+#: users/forms.py:224
+msgid "Recuperar"
+msgstr "Recover"
+
+#: users/forms.py:235
+msgid "Email Or Username"
+msgstr ""
+
+#: users/forms.py:268
+msgid "Guardar"
+msgstr "Save"
+
+#: users/forms.py:280
+msgid "The two password fields didn't match."
+msgstr ""
+
+#: users/forms.py:282
+msgid "New password"
+msgstr "New password"
+
+#: users/forms.py:284
+msgid "New password confirmation"
+msgstr "New password confirmation"
+
+#: users/models.py:42
+msgid "Profile Picture"
+msgstr "Profile picture"
+
+#: users/permissions.py:15
+msgid "Action not allowed"
+msgstr "Action not allowed 🖐"
+
+#: users/serializers.py:45
+msgid "Email is empty"
+msgstr "Email is empty"
+
+#: users/serializers.py:47
+msgid "First name is empty"
+msgstr "First name is empty"
+
+#: users/serializers.py:49
+msgid "Last name is empty"
+msgstr "Last name is empty"
+
+#: users/templates/users/confirm_password.html:5
+#: users/templates/users/reset_password.html:5
+msgid "Reiniciar contraseña"
+msgstr "Reset password"
+
+#: users/templates/users/profile.html:45
+msgid "Editar"
+msgstr "Edit"
+
+#: users/templates/users/reset_pwd_email.html:3
+#, python-format
+msgid ""
+"You're receiving this email because you requested a password reset for your "
+"user account at %(site_name)s."
+msgstr ""
+
+#: users/templates/users/reset_pwd_email.html:5
+msgid "Por favor, ve a la siguiente página para establecer la contraseña:"
+msgstr "Please, go to next page to reset the password:"
+
+#: users/templates/users/reset_pwd_email.html:9
+msgid "Pon tu nombre de usuario si lo has olvidado:"
+msgstr ""
+
+#: users/templates/users/reset_pwd_email.html:11
+msgid "Gracias por usar nuestro sitio!"
+msgstr "Thanks for using our site!"
+
+#: users/templates/users/reset_pwd_email.html:13
+#, python-format
+msgid "The %(site_name)s team"
+msgstr ""
+
+#: users/templates/users/signup.html:5 users/templates/users/signup.html:9
+msgid "Alta de usuario"
+msgstr "Sign up"
+
+#: users/templates/users/signup.html:12
+msgid "Si quieres crear otro usuario debes cerrar sesión"
+msgstr "If you want to create another user you must log out."
+
+#: users/templates/users/user_list_simple.html:31
+msgid "No hemos encontrado usuarios."
+msgstr "Sorry! No users found."
+
+#: users/views.py:61
+msgid "Usuario o contraseña incorrecta"
+msgstr "Incorrect user or password"
+
+#: users/views.py:67
+msgid "User inactive"
+msgstr ""
+
+#: users/views.py:127
+msgid "Usuario no encontrado, lo sentimos mucho 😢"
+msgstr "Sorry! User not found. 😢"
+
+#: users/views.py:193
+msgid "Usuarios a los que sigues"
+msgstr "Users you follow"
+
+#: users/views.py:201
+msgid "Usuarios que te siguen"
+msgstr "Users following you"
+
+#: users/views.py:224
+msgid "😭 Ha ocurrido un error al guardar la información. Inténtalo mas tarde. "
+msgstr "😭 There was an error saving the information. Please try again later."
+
+#: users/views.py:231
+msgid "Información actualizada."
+msgstr "Updated information"
+
+#: users/views.py:293 users/views.py:328
+msgid "Recuperar contraseña | Welldone"
+msgstr "Reset password | Welldone"
+
+#: users/views.py:300
+msgid "Hemos enviado un email a "
+msgstr "We sent an email to "
+
+#: users/views.py:305
+msgid "Este usuario no tiene ningún email asociado."
+msgstr "This user has no associated email."
+
+#: users/views.py:335
+msgid "Se ha mandado un correo al usuario "
+msgstr "An email has been sent to the user "
+
+#: users/views.py:335
+msgid ". Por favor, revisa tu correo."
+msgstr ". Please, review your email."
+
+#: users/views.py:341
+msgid "Este usuario no existe."
+msgstr "This user does not exist. 😱️"
+
+#: users/views.py:346
+msgid "Entrada inválida"
+msgstr "Invalid input"
+
+#: users/views.py:385
+msgid "La contraseña ha sido actualizada."
+msgstr "The password has been updated. 💪"
+
+#: users/views.py:390
+msgid "No se ha podido actualizar la contraseña."
+msgstr "Failed to update password. 😢"
+
+#: users/views.py:396
+msgid "Este link para reiniciar la contraseña ya no es válido."
+msgstr "This url to reset the password is no longer valid. 😣"
+
+#: welldone/exceptions.py:8
+msgid "Deleted relation."
+msgstr ""
+
+#: welldone/exceptions.py:9
+msgid "relation_delete"
+msgstr ""
+
+#: welldone/templates/404.html:4
+msgid "Cachis... No encontramos lo que buscas... :("
+msgstr "Sorry! We did not find what you are looking for. 😢"
+
+#: welldone/templates/500.html:4
+msgid ""
+"Uops... No tiene buena pinta... Inténtalo de nuevo o ponte en contacto con "
+"nosotros."
+msgstr "Uops ... It does not look good ... Try again or get in touch with us."
+
+#: welldone/templates/includes/subnavbar.html:9
+msgid "Ordenar"
+msgstr "Sort"
+
+#: welldone/templates/includes/subnavbar.html:12
+msgid " Fecha ascendente"
+msgstr "Older first"
+
+#: welldone/templates/includes/subnavbar.html:13
+msgid "Fecha descendente"
+msgstr "Newer first"
+
+#: welldone/templates/template.html:100
+msgid "Escribir articulo"
+msgstr "Write article"
+
+#: welldone/templates/template.html:101 welldone/templates/template.html:140
+msgid "Mi perfil"
+msgstr "My profile"
+
+#: welldone/templates/template.html:102
+msgid "Mis articulos"
+msgstr "My articles"
+
+#: welldone/templates/template.html:103 welldone/templates/template.html:144
+msgid "Siguiendo"
+msgstr "Following"
+
+#: welldone/templates/template.html:104 welldone/templates/template.html:146
+msgid "Seguido"
+msgstr "Followed"
+
+#: welldone/templates/template.html:105
+msgid "Mis favoritos"
+msgstr "My favourites"
+
+#: welldone/templates/template.html:109
+msgid "Logout"
+msgstr "Logout"
+
+#: welldone/templates/template.html:113 welldone/templates/template.html:153
+msgid "Login"
+msgstr "Sign in"
+
+#: welldone/templates/template.html:113 welldone/templates/template.html:153
+msgid "Register"
+msgstr "Sign up"
+
+#: welldone/templates/template.html:123
+msgid "MENÚ de navegación"
+msgstr "Navigation menu"
+
+#: welldone/templates/template.html:125
+msgid "Startup"
+msgstr "Startup"
+
+#: welldone/templates/template.html:126
+msgid "Marketing"
+msgstr "Marketing"
+
+#: welldone/templates/template.html:127
+msgid "Productivity"
+msgstr "Productivity"
+
+#: welldone/templates/template.html:128
+msgid "Design"
+msgstr "Design"
+
+#: welldone/templates/template.html:129
+msgid "Copywriting"
+msgstr "Copywriting"
+
+#: welldone/templates/template.html:133
+msgid "Escribir artículo"
+msgstr "Write article"
+
+#: welldone/templates/template.html:135
+msgid "Mis artículos"
+msgstr "My articles"
+
+#: welldone/templates/template.html:149
+msgid "Desconecta"
+msgstr "Logout"
+
+#: welldone/templates/template.html:175
+msgid "¡Oops, debes estar registrado para hacer eso!"
+msgstr "Oops 🙊, you must be registered to do that!"
+
+#: welldone/templates/template.html:178
+msgid "Si ya estás registrado haz login aquí"
+msgstr "If you are already registered sign in here"
+
+#: welldone/templates/template.html:180
+msgid "Inicia sesion"
+msgstr "Sign in"
+
+#: welldone/templates/template.html:184
+msgid "Y si no estás registrado puedes hacerlo aquí"
+msgstr "And if you are not registered you can do it here"
+
+#: welldone/templates/template.html:186
+msgid "Regístrate"
+msgstr "Sign up"
+
+#~ msgid "Title"
+#~ msgstr "Title"
+
+#~ msgid "Introduction"
+#~ msgstr "Introduction"
+
+#~ msgid "Categories"
+#~ msgstr "Categories"
+
+#~ msgid "publication date"
+#~ msgstr "Fecha de publicación"
+
+#~ msgid "traduccion1"
+#~ msgstr "translation1"
+
+#~ msgid " traduccion2 "
+#~ msgstr "translation2"

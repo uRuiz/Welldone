@@ -1,0 +1,165 @@
+@charset "utf-8";
+
+
+.header {
+  width: 100%;
+  border: 0;
+  padding: 15px 0 0 0;
+  border-radius: 0;
+  background-color: $color-primary;
+  font-size: $font-size-nav;
+  overflow: visible;
+
+  @include if-is-phone {
+    border-top: 0;
+    text-align: center;
+  }
+
+  a .custom-menu {
+    color: $color-text-contrast;
+  }
+
+  .user-area {
+    display: block;
+    @include if-is-phone {
+      display: none;
+    }
+  }
+
+  h3 {
+    a {
+      color: $color-text-contrast;
+    }
+  }
+
+  .top-header {
+    border-bottom: 1px solid $color-divider;
+    padding: 0 0 10px 0;
+    h3 {
+      @include if-is-tablet {
+        float: left;
+      }
+    }
+  }
+
+  .user-picture {
+    height: 50px;
+    width:50px;
+    float:right
+  }
+
+  .user-picture:after {
+    content: none;
+  }
+}
+
+.main-menu.fold {
+  @include if-is-phone {
+    height: 50px;
+  }
+}
+
+.main-menu{
+  padding: 10px 0;
+  background-color: $color-primary;
+
+  ul {
+    margin-bottom: 0;
+    @include if-is-phone {
+      width: 100%;
+    }
+  }
+
+  #pull{
+    display: none;
+    @include if-is-phone {
+      display: block;
+      padding: 0 10px;
+    }
+  }
+
+  @include if-is-phone {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    z-index: 10;
+    padding: 10px 0 0;
+  }
+
+  li{
+    position: relative;
+    display: inline-block;
+    font-size: $font-size-nav;
+    padding: 0 30px 0 30px;
+
+    @include if-is-tablet {
+      font-size: $font-size-large;
+    }
+
+    @include if-is-phone {
+      display: block;
+      width: 100%;
+      padding: 10px 10px;
+      border-bottom: 1px solid $color-divider;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+
+    a{
+      color: $color-light-primary;
+      padding: 4px 7px;
+      border-radius: 4px;
+      @include if-is-tablet {
+        width: 100%;
+        display: block;
+      }
+    }
+
+    &:last-child:after{
+      padding: 0;
+    }
+  }
+
+
+}
+
+.nav-menu{
+  padding: 5px 0 5px 0;
+  @include if-is-phone {
+      padding: 5px 0 0 0;
+  }
+
+  li.categories{
+    a{
+      &:hover{
+        background: $color-dark-primary;
+      }
+    }
+    &.selected{
+      a{
+        background: $color-dark-primary;
+      }
+    }
+  }
+
+  .user-actions {
+    display: none;
+    @include if-is-phone {
+      display: list-item;
+    }
+    a {
+      color: $color-cta-primary;
+    }
+  }
+}
+@include if-is-desktop {
+  .fila {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

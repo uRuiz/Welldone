@@ -1,0 +1,44 @@
+{% for article in articles_list %}
+    {% if article.media %}
+        <section class="article-list card card-inverse row">
+            <a href="{% url 'article_details' article.user article.pk %}">
+                <div class="wrapper">
+                    <img src="/media/{{ article.media }}" alt="{{ article.title }}" title="{{  article.title }}" class="img-fluid card-img img-media img-media-list">
+                </div>
+                <div class="card-img-overlay article-header">
+                    {% include "articles/includes/article_list_user.html" %}
+                </div>
+            </a>
+        </section>
+    {% else %}
+        <section class="article-list-no-media card card-inverse row">
+            <a href="{% url 'article_details' article.user article.pk %}">
+                {% include "articles/includes/article_list_user.html" %}
+            </a>
+        </section>
+    {% endif %}
+{% endfor %}
+
+{% if articles_list.has_other_pages %}
+<nav aria-label="Page navigation example" class="row justify-content-md-center pagination-block">
+  <ul class="pagination">
+    {% if articles_list.has_previous %}
+      <li class="page-item"><a class="page-link" href="?page={{ articles_list.previous_page_number }}">&laquo;</a></li>
+    {% else %}
+      <li class="disabled page-item"><span class="page-link">&laquo;</span></li>
+    {% endif %}
+    {% for i in articles_list.paginator.page_range %}
+      {% if articles_list.number == i %}
+        <li class="active page-item"><span class="page-link">{{ i }} <span class="sr-only">(current)</span></span></li>
+      {% else %}
+        <li><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+      {% endif %}
+    {% endfor %}
+    {% if articles_list.has_next %}
+      <li class="page-item"><a class="page-link" href="?page={{ articles_list.next_page_number }}">&raquo;</a></li>
+    {% else %}
+      <li class="disabled page-item"><span class="page-link">&raquo;</span></li>
+    {% endif %}
+  </ul>
+</nav>
+{% endif %}

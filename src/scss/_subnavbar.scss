@@ -1,0 +1,75 @@
+.sub-navbar {
+  width: 100%;
+  height: 52px;
+  background-color: $color-light-primary;
+  padding: 10px 20px;
+}
+.sub-navbar-search {
+  position: relative;
+  float: left;
+}
+.icon-fixed-width {
+  width: 20px;
+  height: 20px;
+}
+
+.filter-button > .dropdown-menu {
+  right:0 !important;
+  left: auto !important;
+}
+
+.sub-navbar-action {
+  position: relative;
+  float: right;
+}
+
+.btn {
+  position: relative;
+  float: right;
+  font-size: $font-size-base;
+}
+
+.btn-article-action {
+  color: $color-white;
+  background-color: $color-cta-primary;
+}
+.btn-article-action.focus,
+.btn-article-action:focus {
+  color: $color-white;
+  background-color:#ec971f;
+}
+.btn-article-action.active,
+.btn-article-action:active,
+.btn-article-action:hover,
+.open>.btn-article-action.dropdown-toggle {
+  color: $color-white;
+  background-color:#ec971f;
+}
+.btn-article-action.active.focus,
+.btn-article-action.active:focus,
+.btn-article-action.active:hover,
+.btn-article-action:active.focus,
+.btn-article-action:active:focus,
+.btn-article-action:active:hover,
+.open>.btn-article-action.dropdown-toggle.focus,
+      .open>.btn-article-action.dropdown-toggle:focus,
+      .open>.btn-article-action.dropdown-toggle:hover {
+  color: $color-white;
+  background-color:#d58512;
+}
+.btn-article-action.active,
+.btn-article-action:active,
+.open>.btn-article-action.dropdown-toggle {
+  background-image:none;
+}
+.btn-article-action.disabled.focus,
+.btn-article-action.disabled:focus,
+.btn-article-action.disabled:hover,
+.btn-article-action[disabled].focus,
+.btn-article-action[disabled]:focus,
+.btn-article-action[disabled]:hover,
+fieldset[disabled] .btn-article-action.focus,
+                   fieldset[disabled] .btn-article-action:focus,
+                                      fieldset[disabled] .btn-article-action:hover {
+  background-color: $color-cta-primary;
+}

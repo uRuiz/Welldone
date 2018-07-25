@@ -1,0 +1,15 @@
+
+{% load i18n %}{% autoescape off %}
+{% blocktrans %}You're receiving this email because you requested a password reset for your user account at {{ site_name }}.{% endblocktrans %}
+
+{% trans "Por favor, ve a la siguiente página para establecer la contraseña:" %}
+    {% block reset_link %}
+        http://{{ domain }}{% url 'reset_password_confirm' uidb64=uid token=token %}
+    {% endblock %}
+{% trans "Pon tu nombre de usuario si lo has olvidado:" %} {{ user.get_username }}
+
+{% trans "Gracias por usar nuestro sitio!" %}
+
+{% blocktrans %}The {{ site_name }} team{% endblocktrans %}
+
+{% endautoescape %}

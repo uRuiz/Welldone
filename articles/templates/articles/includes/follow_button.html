@@ -1,0 +1,9 @@
+{% if user.is_authenticated %}
+    <button class="btn btn-article-action js-follow-user follow {{ following_class }}" data-user-id="{{ article.user.id }}">
+        {{ following_class|capfirst }}
+    </button>
+{% else %}
+    <button class="btn btn-article-action js-handle-login-modal follow">
+        {{ following_class|capfirst }}
+    </button>
+{% endif %}

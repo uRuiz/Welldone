@@ -1,0 +1,83 @@
+body {
+  font-family: $main-font-family;
+
+}
+
+strong {
+  font-weight: bolder;
+}
+
+em {
+  font-style: italic;
+}
+
+a, i.fa:not(.fa-twitter-square,.fa-facebook-square) {
+  color: $color-cta-primary;
+}
+
+a:hover, i.fa:hover:not(.fa-twitter-square,.fa-facebook-square), button:hover {
+  color: darken($color-cta-primary, 15%) !important;
+  text-decoration: none;
+}
+
+.main {
+  min-height: calc(100vh - 80px);
+  @include if-is-phone {
+    margin-bottom: 60px;
+  }
+}
+
+main {
+    margin-top: 20px;
+}
+
+main i.fa {
+  font-size: 3em;
+  display: inline;
+}
+
+i.fa.fa-facebook-square {
+  color: #3b5998;
+  &:hover {
+    color: darken(#3b5998, 15%);
+  }
+}
+
+i.fa.fa-twitter-square {
+  color: #00aced;
+  &:hover {
+    color: darken(#00aced, 15%);
+  }
+}
+
+.img-thumbnail {
+  border-radius: 50%;
+}
+
+.profile-img {
+    width:         80px;
+    height:        80px;
+    border-radius: 50%;
+
+    background-color:    #ccc;
+    background-position: center center;
+    background-size: cover;
+}
+
+.profile-img-big {
+  @extend .profile-img;
+  width:         100px;
+  height:        100px;
+  @include if-is-phone {
+    width:         40px;
+    height:        40px;
+  }
+}
+
+.btn {
+  cursor: pointer;
+}
+
+.dropdown-toggle {
+    cursor: pointer;
+}

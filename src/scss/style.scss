@@ -1,0 +1,21 @@
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "variables";
+@import "media-queries";
+@import "html-tags";
+
+@import "header";
+@import "subnavbar";
+@import "footer";
+@import "font-awesome";
+@import "validation";
+@import "login-modal";
+
+@import "article/article-details";
+@import "article/article-box";
+@import "article/article-comments";
+@import "article/article-responses";
+@import "article/article-list";
+
+@import "user/simple-list";
+@import "user/profile";
+

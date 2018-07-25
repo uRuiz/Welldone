@@ -1,0 +1,15 @@
+{% extends "template.html" %}
+{% load i18n %}
+
+
+{% block title %}
+    {% trans "Actualizar" %} | Welldone
+{% endblock%}
+{% block body %}
+    {{ message }}
+    {% load crispy_forms_tags %}
+    <form method="post" enctype="multipart/form-data" novalidate>
+        {%  crispy form %}
+        {%  crispy formset formset.form.helper %}
+    </form>
+{% endblock%}

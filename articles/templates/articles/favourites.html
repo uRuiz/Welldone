@@ -1,0 +1,26 @@
+{% extends 'template.html' %}
+{% load i18n %}
+{% block title %}
+    {% trans "Articulos favoritos" %} | Welldone
+{% endblock %}
+
+{% block subnavbar %}
+    {% include 'includes/subnavbar.html' %}
+{% endblock %}
+
+{% block body %}
+    {% if favourites_list|length > 0 %}
+        {% include 'articles/includes/article_loop.html' with articles_list=favourites_list%}
+    {% else %}
+        <div class="jumbotron">
+            <p>{% trans "No tienes ningun articulo como favorito" %}</p>
+            <p>{% trans "¡Esperamos que alguno te guste pronto!" %}</p>
+        </div>
+    {% endif %}
+
+    <script type="text/javascript">
+        document.addEventListener('articleInteractions:ready', function () {
+            article.interactions.load()
+        })
+    </script>
+{% endblock %}

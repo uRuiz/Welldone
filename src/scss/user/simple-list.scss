@@ -1,0 +1,21 @@
+.user-simple-list {
+  max-width: 700px;
+
+  li {
+    border-top:1px solid;
+    height: 110px;
+
+    img {
+      width: 100px;
+      float:left
+    }
+
+    p {
+      margin: 10px;
+      float: left;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+
+}

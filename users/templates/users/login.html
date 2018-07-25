@@ -1,0 +1,14 @@
+{% extends "template.html" %}
+{% load i18n %}
+
+{% block title %}
+    {% trans "Iniciar sesión" %}
+{% endblock%}
+{% block body %}
+    {{ error }}
+    {% load crispy_forms_tags %}
+
+    <form method="post" novalidate>
+        {% crispy form %}
+    </form>
+{% endblock%}
